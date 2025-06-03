@@ -1,0 +1,19 @@
+@import "tailwindcss" prefix(tw);
+.autoscroller {
+  animation: marquee 20s linear infinite;
+}
+
+.autoscroller2 {
+  animation: marquee 20s linear infinite;
+  animation-direction: reverse;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
