@@ -16,15 +16,15 @@ const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://openchains.shop";
 export const metadata: Metadata = {
   title: {
     template: "%s | OpenChains Technologies",
-    default: "OpenChains Technologies",
+    default: "OpenChains Technologies - World Of Innovating Technologies",
   },
   keywords: [
     "electronics",
     "web design",
     "system design",
     "web technologies",
-    "artificial intelligence",
-    "whatsapp chatsbots",
+    "AI",
+    "chatbots",
     "openchains",
     "zimbabwe",
     "websites",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     title: "OpenchainsTechnologies",
   },
   description:
-    "OpenChains Technologies builds websites, apps, games, and custom software solutions for businesses and individuals.",
+    "Websites development, apps development,games development & custom software for businesses & individuals.OpenChains Technologies: digital solutions in Zimbabwe",
   metadataBase: new URL(baseUrl),
 };
 

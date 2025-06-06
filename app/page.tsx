@@ -11,8 +11,14 @@ import Photos from "@/components/photos";
 import Projects from "@/components/projects";
 import SearchSection from "@/components/search-section";
 import Testimonial from "@/components/testimonial";
+import { Metadata } from "next";
 import React from "react";
-
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://openchains.shop";
+export const metadata: Metadata = {
+  alternates: {
+    canonical: baseUrl, // Self-referencing canonical
+  },
+};
 export default function App() {
   return (
     <>

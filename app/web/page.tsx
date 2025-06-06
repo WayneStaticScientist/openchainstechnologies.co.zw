@@ -2,7 +2,7 @@ import BreadCrump from "@/components/breadcrump";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import PassedDetails from "@/components/sub/passed-details";
-import { Globals, ServicesList } from "@/utils/globals";
+import { baseUrl, Globals, ServicesList } from "@/utils/globals";
 import Head from "next/head";
 import React from "react";
 export const metadata = {
@@ -12,6 +12,9 @@ export const metadata = {
   keywords:
     "web design, web development, microservices, graphic design, video editing, photo editing, simulations, electronics",
   author: "OpenChains",
+  alternates: {
+    canonical: baseUrl + "/web", // Self-referencing canonical
+  },
 };
 export default function WebServices() {
   return (

@@ -2,7 +2,7 @@ import BreadCrump from "@/components/breadcrump";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import PassedDetails from "@/components/sub/passed-details";
-import { ServicesList } from "@/utils/globals";
+import { baseUrl, ServicesList } from "@/utils/globals";
 import Head from "next/head";
 import React from "react";
 export const metadata = {
@@ -12,6 +12,9 @@ export const metadata = {
   keywords:
     "simulation, 3D modeling, engineering simulations, electronics process simulations",
   author: "OpenChains",
+  alternates: {
+    canonical: baseUrl + "/simulations", // Self-referencing canonical
+  },
 };
 export default function SimulationServices() {
   return (

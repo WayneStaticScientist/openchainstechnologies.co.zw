@@ -2,12 +2,15 @@ import BreadCrump from "@/components/breadcrump";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import PassedDetails from "@/components/sub/passed-details";
-import { ServicesList } from "@/utils/globals";
+import { baseUrl, ServicesList } from "@/utils/globals";
 import React from "react";
 export const metadata = {
   title: "AI Services",
   description:
     "Explore our AI services that leverage cutting-edge technology to enhance your business operations and drive innovation.",
+  alternates: {
+    canonical: baseUrl + "/ai", // Self-referencing canonical
+  },
 };
 export default function AiServices() {
   return (

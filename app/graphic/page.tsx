@@ -2,7 +2,7 @@ import BreadCrump from "@/components/breadcrump";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import PassedDetails from "@/components/sub/passed-details";
-import { ServicesList } from "@/utils/globals";
+import { baseUrl, ServicesList } from "@/utils/globals";
 import Head from "next/head";
 import React from "react";
 export const metadata = {
@@ -12,6 +12,9 @@ export const metadata = {
   keywords:
     "graphic design, logo design, branding, marketing materials, web design",
   author: "OpenChains",
+  alternates: {
+    canonical: baseUrl + "/graphic", // Self-referencing canonical
+  },
 };
 export default function GraphicDesign() {
   return (

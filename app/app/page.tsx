@@ -2,12 +2,15 @@ import BreadCrump from "@/components/breadcrump";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import PassedDetails from "@/components/sub/passed-details";
-import { Globals, ServicesList } from "@/utils/globals";
+import { baseUrl, Globals, ServicesList } from "@/utils/globals";
 import React from "react";
 export const metadata = {
   title: "App Services",
   description:
     "Explore our app services designed to meet your business needs and drive innovation.",
+  alternates: {
+    canonical: baseUrl + "/app", // Self-referencing canonical
+  },
 };
 export default function AppServices() {
   return (

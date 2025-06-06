@@ -405,3 +405,5 @@ export const sendEmailOnline = async (obj: Record<string, unknown>) => {
     };
   }
 };
+export const baseUrl =
+  process.env.NEXT_PUBLIC_BASE_URL || "https://openchains.shop";
