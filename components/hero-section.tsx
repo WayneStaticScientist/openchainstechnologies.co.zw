@@ -54,10 +54,10 @@ export default function HeroSection() {
                         <h6 data-animation="fadeInUp" data-delay="1.3s">
                           Software & Electronics Company
                         </h6>
-                        <h1 data-animation="fadeInUp" data-delay="1.5s">
+                        <h2 data-animation="fadeInUp" data-delay="1.5s">
                           <span className="shape-text">Openchains</span>
                           <span>The</span> <br /> Software Industry
-                        </h1>
+                        </h2>
                         <p data-animation="fadeInUp" data-delay="1.7s">
                           Innovation Software & Electronics Solutions Website
                           development , Electronics Manufacturing and Digital
@@ -90,10 +90,10 @@ export default function HeroSection() {
                         <h6 data-animation="fadeInUp" data-delay="1.3s">
                           Software & Electronics Company
                         </h6>
-                        <h1 data-animation="fadeInUp" data-delay="1.5s">
+                        <h2 data-animation="fadeInUp" data-delay="1.5s">
                           <span className="shape-text">Openchains</span>
                           <span>The</span> <br /> Electronics Industry
-                        </h1>
+                        </h2>
                         <p data-animation="fadeInUp" data-delay="1.7s">
                           {" "}
                           Innovation Software & Electronics Solutions Website

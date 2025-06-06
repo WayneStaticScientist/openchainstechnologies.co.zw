@@ -360,27 +360,27 @@ export const BlogNews = [
 export const PhotoGallery = [
   {
     img: "/assets/img/instagram/01.jpg",
-    link: "https://www.instagram.com/p/Cx4q1ZxN5i8/",
+    link: "",
   },
   {
     img: "/assets/img/instagram/02.jpg",
-    link: "https://www.instagram.com/p/Cx4q1ZxN5i8/",
+    link: "",
   },
   {
     img: "/assets/img/instagram/03.jpg",
-    link: "https://www.instagram.com/p/Cx4q1ZxN5i8/",
+    link: "",
   },
   {
     img: "/assets/img/instagram/04.jpg",
-    link: "https://www.instagram.com/p/Cx4q1ZxN5i8/",
+    link: "",
   },
   {
     img: "/assets/img/instagram/05.jpg",
-    link: "https://www.instagram.com/p/Cx4q1ZxN5i8/",
+    link: "",
   },
   {
     img: "/assets/img/instagram/06.jpg",
-    link: "https://www.instagram.com/p/Cx4q1ZxN5i8/",
+    link: "",
   },
 ];
 
