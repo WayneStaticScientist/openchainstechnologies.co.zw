@@ -12,13 +12,31 @@ import "./assets/css/datepickerboot.css";
 import "./assets/css/nice-select.css";
 import "./assets/css/main.css";
 import "./assets/css/main.css";
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://openchains.shop";
 export const metadata: Metadata = {
   title: {
     template: "%s | OpenChains Technologies",
     default: "OpenChains Technologies",
   },
+  keywords: [
+    "electronics",
+    "web design",
+    "system design",
+    "web technologies",
+    "artificial intelligence",
+    "whatsapp chatsbots",
+    "openchains",
+    "zimbabwe",
+    "websites",
+  ],
+  openGraph: {
+    siteName: "OpenchainsTechnologies",
+    url: baseUrl,
+    title: "OpenchainsTechnologies",
+  },
   description:
     "OpenChains Technologies builds websites, apps, games, and custom software solutions for businesses and individuals.",
+  metadataBase: new URL(baseUrl),
 };
 
 export default function RootLayout({
@@ -28,6 +46,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: "OpenChainsTechnologies", // The desired site name
+              alternateName: ["openchains.shop", "Openchains Technologies"], // Optional: alternative names
+              url: baseUrl, // The canonical URL of your website
+            }),
+          }}
+        />
+      </head>
       <body>
         {children}
         <Script
