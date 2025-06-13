@@ -19,18 +19,6 @@ export const metadata = {
 export default function GraphicDesign() {
   return (
     <>
-      <Head>
-        <title>OpenChains - Graphic Design</title>
-        <meta
-          name="description"
-          content="We provide top-notch graphic design services to help you create stunning visuals for your brand."
-        />
-        <meta
-          name="keywords"
-          content="graphic design, logo design, branding, marketing materials, web design"
-        />
-        <meta name="author" content="OpenChains" />
-      </Head>
       <Header />
       <BreadCrump page={"graphic"} title={"Graphic Desing"} />
       <PassedDetails

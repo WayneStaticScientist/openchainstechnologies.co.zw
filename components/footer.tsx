@@ -276,7 +276,7 @@ export default function Footer() {
                   <a href="#">Privacy</a>
                 </li>
                 <li>
-                  <a href="#">Terms</a>
+                  <a href="/terms">Terms</a>
                 </li>
                 <li>
                   <a href="#">Site Map</a>
