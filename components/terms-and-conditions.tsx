@@ -15,13 +15,13 @@ export const Terms = () => {
           2024
         </p>
         <p className="tw:text-gray-700! tw:leading-relaxed! tw:mb-6!">
-          Please read these Terms and Conditions ("Terms", "Terms and
-          Conditions") carefully before using the Openchains.shop website ("the
-          Service") operated by{" "}
+          Please read these Terms and Conditions (&quot;Terms&quot;, &quot;Terms
+          and Conditions&quot;) carefully before using the Openchains.shop
+          website (&quot;the Service&quot;) operated by{" "}
           <span className="tw:font-bold! tw:text-blue-600!">
             Openchains Technologies
           </span>{" "}
-          ("us", "we", or "our").
+          (&quot;us&quot;, &quot;we&quot;, or &quot;our&quot;).
         </p>
         <p className="tw:text-gray-700! tw:leading-relaxed! tw:mb-6!">
           Your access to and use of the Service is conditioned on your
@@ -43,44 +43,52 @@ export const Terms = () => {
         <ul className="tw:list-disc! tw:list-inside! tw:text-gray-700! tw:mb-8! tw:space-y-2!">
           <li>
             <strong className="tw:text-gray-900!">
-              "Company," "We," "Us," "Our":
+              &apos;Company,&apos; &apos;We,&apos; &apos;Us,&apos;
+              &apos;Our&apos;:
             </strong>{" "}
             Refers to Openchains Technologies and its operators.
           </li>
           <li>
-            <strong className="tw:text-gray-900!">"Client," "You":</strong>{" "}
+            <strong className="tw:text-gray-900!">
+              &quot;Client,&quot; &quot;You&quot;:
+            </strong>{" "}
             Refers to any individual, business, or entity engaging our website
             development services.
           </li>
           <li>
-            <strong className="tw:text-gray-900!">"Customer":</strong> Refers to
-            any individual, business, or entity purchasing electronics from
-            Openchains Technologies.
+            <strong className="tw:text-gray-900!">&quot;Customer&quot;:</strong>{" "}
+            Refers to any individual, business, or entity purchasing electronics
+            from Openchains Technologies.
           </li>
           <li>
-            <strong className="tw:text-gray-900!">"Services":</strong> Refers
-            collectively to the website development services and the sale of
-            electronics offered by Openchains Technologies.
+            <strong className="tw:text-gray-900!">&quot;Services&quot;:</strong>{" "}
+            Refers collectively to the website development services and the sale
+            of electronics offered by Openchains Technologies.
           </li>
           <li>
-            <strong className="tw:text-gray-900!">"Project":</strong> Refers to
-            a specific website development undertaking agreed upon between the
-            Company and the Client.
+            <strong className="tw:text-gray-900!">&quot;Project&quot;:</strong>{" "}
+            Refers to a specific website development undertaking agreed upon
+            between the Company and the Client.
           </li>
           <li>
-            <strong className="tw:text-gray-900!">"Website":</strong> Refers to
-            the digital product developed by Openchains Technologies for the
-            Client as part of a Project.
+            <strong className="tw:text-gray-900!">&quot;Website&quot;:</strong>{" "}
+            Refers to the digital product developed by Openchains Technologies
+            for the Client as part of a Project.
           </li>
           <li>
-            <strong className="tw:text-gray-900!">"Electronics":</strong> Refers
-            to any electronic products offered for sale by Openchains
+            <strong className="tw:text-gray-900!">
+              &quot;Electronics&quot;:
+            </strong>{" "}
+            Refers to any electronic products offered for sale by Openchains
             Technologies through its website.
           </li>
           <li>
-            <strong className="tw:text-gray-900!">"Contract Expiry":</strong>{" "}
+            <strong className="tw:text-gray-900!">
+              &quot;Contract Expiry&quot;:
+            </strong>{" "}
             The date after which the grace period for a Project ends, and the
-            Client's right to complete payment for and own the Project ceases.
+            Client&apos;s right to complete payment for and own the Project
+            ceases.
           </li>
         </ul>
 
@@ -214,7 +222,7 @@ export const Terms = () => {
             Contract Expiry:
             <ul className="tw:list-alpha! tw:list-inside! tw:pl-6! tw:mt-2! tw:space-y-1!">
               <li>
-                The Client's right to complete the payment for and take
+                The Client&apos;s right to complete the payment for and take
                 ownership of the Website is forfeited.
               </li>
               <li>
@@ -276,7 +284,7 @@ export const Terms = () => {
             Openchains Technologies retains the right to use, develop, and own
             any underlying code, platforms, tools, libraries, or generic
             components used in the development process that are not unique to
-            the Client's specific Website.
+            the Client&apos;s specific Website.
           </li>
           <li>
             Openchains Technologies reserves the right to display the completed
@@ -359,8 +367,9 @@ export const Terms = () => {
             completion, all payments made up to the date of termination are
             non-refundable, and the Client remains liable for payment for all
             work completed and expenses incurred by Openchains Technologies up
-            to the date of termination, calculated at Openchains Technologies's
-            standard rates, less any non-refundable deposit already paid.
+            to the date of termination, calculated at Openchains
+            Technologies&apos;s standard rates, less any non-refundable deposit
+            already paid.
           </li>
         </ul>
 
@@ -546,11 +555,12 @@ export const Terms = () => {
         <ul className="tw:list-decimal! tw:list-inside! tw:text-gray-700! tw:mb-6! tw:space-y-2!">
           <li>
             The Service and all products and services delivered to you through
-            the Service are provided "as is" and "as available" without any
-            representation, warranties, or conditions of any kind, either
-            express or implied, including all implied warranties or conditions
-            of merchantability, merchantable quality, fitness for a particular
-            purpose, durability, title, and non-infringement.
+            the Service are provided &qoute;as is&qoute; and &qoute;as
+            available&qoute; without any representation, warranties, or
+            conditions of any kind, either express or implied, including all
+            implied warranties or conditions of merchantability, merchantable
+            quality, fitness for a particular purpose, durability, title, and
+            non-infringement.
           </li>
           <li>
             In no case shall Openchains.shop, its directors, officers,

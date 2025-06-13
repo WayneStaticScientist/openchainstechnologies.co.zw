@@ -3,7 +3,6 @@ import Footer from "@/components/footer";
 import Header from "@/components/header";
 import PassedDetails from "@/components/sub/passed-details";
 import { baseUrl, ServicesList } from "@/utils/globals";
-import Head from "next/head";
 import React from "react";
 export const metadata = {
   title: "Graphic Design Services",
