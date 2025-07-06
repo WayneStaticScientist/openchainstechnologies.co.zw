@@ -16,32 +16,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
     },
     {
-      url: `${baseUrl}/graphic`,
-      priority: 0.8,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-    },
-    {
       url: `${baseUrl}/electronics`,
       priority: 0.7,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-    },
-    {
-      url: `${baseUrl}/projects`,
-      priority: 0.6,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-    },
-    {
-      url: `${baseUrl}/simulations`,
-      priority: 0.8,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-    },
-    {
-      url: `${baseUrl}/systems`,
-      priority: 0.6,
       lastModified: new Date(),
       changeFrequency: "weekly",
     },

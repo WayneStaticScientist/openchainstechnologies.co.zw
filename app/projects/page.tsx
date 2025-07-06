@@ -32,7 +32,7 @@ export default function ProjectsPage() {
         <meta name="author" content="OpenChains" />
       </Head>
       <Header />
-      <BreadCrump page={"projects"} title={"Projects"} />
+      <BreadCrump page={"projects"} title={"Projects"} summary={""} />
 
       <Projects />
       <Footer />

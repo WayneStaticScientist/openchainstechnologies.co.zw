@@ -1,34 +1,47 @@
-import React from 'react'
+import React from "react";
 
-export default function BreadCrump({ page, title }: { page: string, title: string }) {
-    return (
-        <>
-            <div className="breadcrumb-wrapper section-padding  bg-cover" style={{
-                backgroundImage: "url('/assets/img/breadcrumb-bg.jpg')"
-            }}>
-                <div className="container-fluid">
-                    <div className="page-heading">
-                        <ul className="breadcrumb-items wow fadeInUp" data-wow-delay=".3s">
-                            <li>
-                                <a href="index-2.html">
-                                    Home
-                                </a>
-                            </li>
-                            <li>
-                                <i className="far fa-slash"></i>
-                            </li>
-                            <li>
-                                {title}
-                            </li>
-                        </ul>
-                        <h1 className="wow fadeInUp" data-wow-delay=".5s">{page}</h1>
-                    </div>
-                </div>
-                <div className="plane-shape float-bob-x">
-                    <img src="/assets/img/breadcrumb-plane.png" alt="img" />
-                </div>
+export default function BreadCrump({
+  page,
+  title,
+  summary,
+}: {
+  page: string;
+  title: string;
+  summary: string;
+}) {
+  return (
+    <>
+      <section className="float-left w-100 position-relative sub-banner-con main-box about-banner">
+        <div className="container">
+          <div className="breadcrumb-con d-inline-block">
+            <ol className="breadcrumb mb-0">
+              <li className="breadcrumb-item">
+                <a href="/">Home</a>
+              </li>
+              <li className="breadcrumb-item active" aria-current="page">
+                {page}
+              </li>
+            </ol>
+            {/* breadcrumb */}
+          </div>
+          <div className="row">
+            <div className="col-lg-7 col-md-7">
+              <div className="sub-banner-content-con position-relative">
+                <h1 className="text-white">{title}</h1>
+                <p className="mb-0 text-white">
+                  {summary} <br />
+                  #The only Technologies
+                </p>
+                {/* sub banner content con */}
+              </div>
+              {/* col */}
             </div>
-
-        </>
-    )
+            {/* row */}
+          </div>
+          {/* container */}
+        </div>
+        {/* sub banner con */}
+      </section>
+    </>
+  );
 }

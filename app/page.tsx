@@ -1,18 +1,16 @@
-import About from "@/components/about";
-import CatalogueGroup from "@/components/catalog-group";
-import Feature from "@/components/feature";
-import Footer from "@/components/footer";
-import Header from "@/components/header";
-import HeroSection from "@/components/hero-section";
-import Inspirational from "@/components/inspirational";
-import Marqueee from "@/components/marquee";
-import News from "@/components/news";
-import Photos from "@/components/photos";
-import Projects from "@/components/projects";
-import SearchSection from "@/components/search-section";
-import Testimonial from "@/components/testimonial";
-import { Metadata } from "next";
 import React from "react";
+import { Metadata } from "next";
+import Header from "@/components/header";
+import Pricing from "@/components/pricing";
+import Experience from "@/components/experience";
+import FieldInput from "@/components/field-input";
+import HeroSection from "@/components/hero-section";
+import SecurityFeatures from "@/components/securitty-features";
+import OtherThings from "@/components/other-things";
+import Testimonial from "@/components/testimonial";
+import Partners from "@/components/partner";
+import Footer from "@/components/footer";
+
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://openchains.shop";
 export const metadata: Metadata = {
   alternates: {
@@ -23,17 +21,14 @@ export default function App() {
   return (
     <>
       <Header />
-      <SearchSection />
       <HeroSection />
-      <CatalogueGroup />
-      <About />
-      <Feature />
-      <Projects />
-      <Marqueee />
-      <Inspirational />
+      <Pricing />
+      <FieldInput />
+      <SecurityFeatures />
+      <Experience />
+      <OtherThings />
       <Testimonial />
-      <News />
-      <Photos />
+      <Partners />
       <Footer />
     </>
   );

@@ -1,17 +1,16 @@
 import "./style.css";
-import type { Metadata } from "next";
+import "./assets/css/shop.css";
+import "./assets/css/blog.css";
+import "./assets/css/custom.css";
 import Script from "next/script";
-import "./assets/css/bootstrap.min.css";
-import "./assets/css/font-awesome.css";
 import "./assets/css/animate.css";
-import "./assets/css/magnific-popup.css";
-import "./assets/css/meanmenu.css";
-import "./assets/css/odometer.css";
-import "./assets/css/swiper-bundle.min.css";
-import "./assets/css/datepickerboot.css";
-import "./assets/css/nice-select.css";
-import "./assets/css/main.css";
-import "./assets/css/main.css";
+import type { Metadata } from "next";
+import "./assets/css/responsive.css";
+import "./assets/css/priceslider.css";
+import "./assets/css/superclasses.css";
+import "./assets/css/owl.carousel.min.css";
+import "./assets/bootstrap/bootstrap.min.css";
+import "./assets/css/owl.theme.default.min.css";
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://openchains.shop";
 export const metadata: Metadata = {
   title: {
@@ -30,10 +29,10 @@ export const metadata: Metadata = {
     "websites",
   ],
   openGraph: {
-    siteName: "OpenchainsTechnologies",
+    siteName: "Openchains Technologies",
     url: baseUrl,
     type: "website",
-    title: "OpenchainsTechnologies",
+    title: "Openchains Technologies",
   },
   description:
     "Websites development, apps development,games development & custom software for businesses & individuals.OpenChains Technologies: digital solutions in Zimbabwe",
@@ -45,65 +44,84 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Openchains Technologies",
+    alternateName: ["Openchains", "OpenTech"],
+    url: baseUrl,
+  };
   return (
     <html lang="en">
       <head>
         <script
+          id="website-schema" //
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "WebSite",
-              name: "OpenChainsTechnologies", // The desired site name
-              alternateName: ["openchains.shop", "Openchains Technologies"], // Optional: alternative names
-              url: baseUrl, // The canonical URL of your website
-            }),
-          }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
       </head>
       <body>
         {children}
         <Script
-          src="/assets/js/jquery-3.7.1.min.js"
+          src="/assets/js/jquery.min.js"
           strategy="afterInteractive"
         ></Script>
         <Script
-          src="/assets/js/bootstrap.bundle.min.js"
           strategy="afterInteractive"
+          src="/assets/js/popper.min.js"
         ></Script>
         <Script
-          src="/assets/js/jquery.nice-select.min.js"
           strategy="afterInteractive"
+          src="/assets/js/bootstrap.min.js"
         ></Script>
         <Script
-          src="/assets/js/odometer.min.js"
           strategy="afterInteractive"
+          src="/assets/js/drawer-menu.js"
         ></Script>
         <Script
-          src="/assets/js/jquery.appear.min.js"
           strategy="afterInteractive"
+          src="/assets/js/owl.carousel.js"
         ></Script>
         <Script
-          src="/assets/js/bootstrap-datepicker.js"
           strategy="afterInteractive"
+          src="/assets/js/contact-form.js"
         ></Script>
         <Script
-          src="/assets/js/swiper-bundle.min.js"
           strategy="afterInteractive"
+          src="/assets/js/video-popup.js"
         ></Script>
         <Script
-          src="/assets/js/jquery.meanmenu.min.js"
           strategy="afterInteractive"
+          src="/assets/js/video-section.js"
         ></Script>
         <Script
-          src="/assets/js/jquery.magnific-popup.min.js"
           strategy="afterInteractive"
+          src="/assets/js/jquery.validate.js"
+        ></Script>
+        <Script strategy="afterInteractive" src="/assets/js/wow.js"></Script>
+        <Script
+          strategy="afterInteractive"
+          src="/assets/js/counter.js"
         ></Script>
         <Script
-          src="/assets/js/wow.min.js"
           strategy="afterInteractive"
+          src="/assets/js/jquery-ui.js"
         ></Script>
-        <Script src="/assets/js/main.js" strategy="afterInteractive"></Script>
+        <Script
+          strategy="afterInteractive"
+          src="/assets/js/vps_slider.js"
+        ></Script>
+        <Script strategy="afterInteractive" src="/assets/js/custom.js"></Script>
+        <Script strategy="afterInteractive" src="/assets/js/search.js"></Script>
+        <Script strategy="afterInteractive" src="/assets/js/shop.js"></Script>
+        <Script
+          strategy="afterInteractive"
+          src="/assets/js/remove-product.js"
+        ></Script>
+        <Script
+          strategy="afterInteractive"
+          src="/assets/js/quantity.js"
+        ></Script>
       </body>
     </html>
   );

@@ -1,191 +1,79 @@
 "use client";
+import { HeroDisplay } from "@/utils/constants";
 import React from "react";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from "react-responsive-carousel";
-import { FaArrowRightLong } from "react-icons/fa6";
-import { Globals } from "@/utils/globals";
 export default function HeroSection() {
-  const [product, setProduct] = React.useState("");
-  const [forWhat, setForWhat] = React.useState("");
-  const [dueDate, setDueDate] = React.useState("");
-  const [category] = React.useState("");
   return (
     <>
-      <section className="hero-section hero-4">
-        <div className="array-button">
-          <button className="array-prev">
-            <i className="far fa-long-arrow-left"></i>
-          </button>
-          <button className="array-next">
-            <i className="far fa-long-arrow-right"></i>
-          </button>
-        </div>
-        <div className="swiper hero-slider">
-          <Carousel
-            showArrows={false}
-            animationHandler={"fade"}
-            showStatus={false}
-            showIndicators={false}
-            swipeable={false}
-            infiniteLoop={true}
-            autoPlay={true}
-            interval={5000}
-            transitionTime={2000}
-            className="fade-carousel"
-          >
-            <div className="swiper-slide fade-in">
-              <div className="hero-items">
-                <div className="plane-shape">
-                  <img src="/assets/img/hero/new/plane-2.png" alt="img" />
-                </div>
-                <div className="plane-shape-2">
-                  <img src="/assets/img/hero/new/plane-3.png" alt="img" />
-                </div>
-                <div
-                  className="hero-bg bg-cover"
-                  style={{
-                    backgroundImage: "url('/assets/img/hero/04.jpg')",
-                  }}
-                ></div>
-                <div className="container">
-                  <div className="row g-4">
-                    <div className="col-lg-12">
-                      <div className="hero-content">
-                        <h6 data-animation="fadeInUp" data-delay="1.3s">
-                          Software & Electronics Company
-                        </h6>
-                        <h1 data-animation="fadeInUp" data-delay="1.5s">
-                          <span className="shape-text">Openchains</span>
-                          <span>The</span> <br /> Software Industry
-                        </h1>
-                        <p data-animation="fadeInUp" data-delay="1.7s">
-                          Innovation Software & Electronics Solutions Website
-                          development , Electronics Manufacturing and Digital
-                          advertising Services
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="swiper-slide fade-in">
-              <div className="hero-items">
-                <div className="plane-shape">
-                  <img src="assets/img/hero/new/plane-2.png" alt="img" />
-                </div>
-                <div className="plane-shape-2">
-                  <img src="assets/img/hero/new/plane-3.png" alt="img" />
-                </div>
-                <div
-                  className="hero-bg bg-cover"
-                  style={{
-                    backgroundImage: "url('/assets/img/hero/05.jpg')",
-                  }}
-                ></div>
-                <div className="container">
-                  <div className="row g-4">
-                    <div className="col-lg-12">
-                      <div className="hero-content">
-                        <h6 data-animation="fadeInUp" data-delay="1.3s">
-                          Software & Electronics Company
-                        </h6>
-                        <h2 data-animation="fadeInUp" data-delay="1.5s">
-                          <span className="shape-text">Openchains</span>
-                          <span>The</span> <br /> Electronics Industry
-                        </h2>
-                        <p data-animation="fadeInUp" data-delay="1.7s">
-                          {" "}
-                          Innovation Software & Electronics Solutions Website
-                          development , Electronics Manufacturing and Digital
-                          advertising Services
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </Carousel>
-        </div>
+      <section className="float-left w-100 position-relative banner-con main-box">
+        <figure>
+          <img
+            src="/assets/images/banner-element.png"
+            alt="element"
+            className="img-fluid position-absolute banner-element"
+          />
+        </figure>
         <div className="container">
-          <div className="booking-list-area-1">
-            <form className="row g-3 align-items-end col-12">
-              <div className="col-md-3">
-                <div className="booking-list">
-                  <div className="content">
-                    <h5 className="mb-2">Product</h5>
-                    <select
-                      className="form-select"
-                      value={product}
-                      onChange={(e) => setProduct(e.target.value)}
-                    >
-                      <option>Your Desired Project</option>
-                      <option>Website</option>
-                      <option>Mobile App</option>
-                      <option>Desktop App</option>
-                      <option>System Service</option>
-                      <option>Electronics</option>
-                    </select>
+          <div className="owl-carousel owl-theme">
+            {HeroDisplay.map((hero, index) => (
+              <div className="item" key={index}>
+                <div className="row align-items-center">
+                  <div className="col-lg-6 col-md-6 pl-0">
+                    <div className="banner-content-con">
+                      <span className="d-block magento-text inter-font font-weight-normal">
+                        <i className="fa-solid fa-link" />
+                        {hero.title}
+                      </span>
+                      <h1>
+                        {hero.moto1} <br /> {hero.moto2}
+                        <span className="d-inline-block orange-text web-text">
+                          {hero.moto3}
+                        </span>{" "}
+                        {hero.moto4}
+                      </h1>
+                      <div className="secondary-button d-inline-block">
+                        <a href={hero.link} className="d-inline-block">
+                          Get Started <i className="fas fa-arrow-right ml-2" />{" "}
+                        </a>
+                      </div>
+                      <a
+                        href="/services"
+                        className="d-inline-block magento-text our-features-link inter-font font-weight-normal"
+                      >
+                        Our Features
+                      </a>
+                    </div>
+                    {/* col */}
                   </div>
-                </div>
-              </div>
-              <div className="col-md-3">
-                <div className="booking-list">
-                  <div className="content">
-                    <h5 className="mb-2">For</h5>
-                    <select
-                      className="form-select"
-                      value={forWhat}
-                      onChange={(e) => setForWhat(e.target.value)}
-                    >
-                      <option>Choose For What</option>
-                      <option>Business</option>
-                      <option>Personal</option>
-                      <option>Organization</option>
-                      <option>Other</option>
-                    </select>
+                  <div className="col-lg-6 col-md-6">
+                    <div className="banner-image-con position-relative text-right">
+                      <figure className="banner-img1 text-right">
+                        <img
+                          src={hero.src1}
+                          alt="image"
+                          className="d-inline-block"
+                        />
+                      </figure>
+                      <figure className="banner-img2">
+                        <img
+                          src={hero.sr2}
+                          alt="image"
+                          className="position-absolute z-index-1"
+                        />
+                      </figure>
+                      {/* banner image con */}
+                    </div>
+                    {/* col */}
                   </div>
+                  {/* row */}
                 </div>
+                {/* item */}
               </div>
-              <div className="col-md-3">
-                <div className="booking-list">
-                  <div className="content">
-                    <h5 className="mb-2">Due Date</h5>
-                    <input
-                      className="form-control"
-                      type="text"
-                      placeholder="dd/mm/yyyy"
-                      value={dueDate}
-                      onChange={(e) => setDueDate(e.target.value)}
-                    />
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-12 col-md-3">
-                <a
-                  href={Globals.decodeToBooking(
-                    product,
-                    forWhat,
-                    dueDate,
-                    category
-                  )}
-                  target="_blank"
-                  className="text-decoration-none"
-                >
-                  <button
-                    type="submit"
-                    className="btn btn-primary d-flex align-items-center gap-2"
-                  >
-                    <span>book</span>
-                    <FaArrowRightLong />
-                  </button>
-                </a>
-              </div>
-            </form>
+            ))}
+            {/* owl carousel */}
           </div>
+          {/* container */}
         </div>
+        {/* banner con */}
       </section>
     </>
   );

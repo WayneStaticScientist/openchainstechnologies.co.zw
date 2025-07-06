@@ -1,291 +1,174 @@
-import { Globals } from "@/utils/globals";
-import Link from "next/link";
 import React from "react";
-
+import { Globals } from "@/utils/globals";
 export default function Footer() {
   return (
     <>
-      <footer
-        className="footer-section fix section-bg bg-cover"
-        style={{
-          backgroundImage: "url('/assets/img/footer/bg-image.jpg')",
-        }}
-      >
+      <section className="float-left w-100 position-relative footer-con main-box">
         <div className="container">
-          <div className="footer-newsletter-items">
-            <h2>Get Updated the Our Latest Newsletter</h2>
-            <div className="footer-input">
-              <input type="email" id="email2" placeholder="Enter your email" />
-              <button className="newsletter-btn" type="submit">
-                Subscribe <i className="far fa-search"></i>
-              </button>
+          <div className="row">
+            <div className="col-lg-3 col-md-6 col-sm-6">
+              <div className="footer-inner-links var1">
+                <h4 className="text-white">Our Services</h4>
+                <ul className="list-unstyled p-0 m-0">
+                  <li>
+                    <i className="fa-solid fa-circle" />
+                    <a href="#" className="d-inline-block">
+                      Lessons
+                    </a>
+                  </li>
+                  <li>
+                    <i className="fa-solid fa-circle" />
+                    <a href="#" className="d-inline-block">
+                      Electrical Engineering
+                    </a>
+                  </li>
+                  <li>
+                    <i className="fa-solid fa-circle" />
+                    <a href="#" className="d-inline-block">
+                      Web development
+                    </a>
+                  </li>
+                  <li className="mb-0">
+                    <i className="fa-solid fa-circle" />
+                    <a href="#" className="d-inline-block">
+                      Game Development
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              {/* col */}
             </div>
-          </div>
-          <div className="footer-wrapper">
-            <div className="row">
-              <div className="col-xl-5 col-lg-7 col-md-12">
-                <div className="footer-widget-items">
-                  <div className="widget-title">
-                    <Link href="/" className="footer-logo">
-                      <img src="/assets/img/logo/black-logo.png" alt="img" />
-                    </Link>
-                  </div>
-                  <div className="footer-content">
-                    <div className="contact-info-items">
-                      <div className="contact-items">
-                        <div className="icon tw:items-center tw:justify-center tw:flex">
-                          <img src="/assets/img/call.png" alt="img" />
-                        </div>
-                        <div className="content">
-                          <span>Call Us</span>
-                          <h6>
-                            <a href={`tel:${Globals.Phone}`}>{Globals.Phone}</a>
-                          </h6>
-                        </div>
-                      </div>
-                      <div className="contact-items">
-                        <div className="icon tw:items-center tw:justify-center tw:flex">
-                          <img src="/assets/img/mail.png" alt="img" />
-                        </div>
-                        <div className="content">
-                          <span>Mail Us</span>
-                          <h6>
-                            <a href={`mailto:${Globals.Email}`}>
-                              {Globals.Email}
-                            </a>
-                          </h6>
-                        </div>
-                      </div>
-                    </div>
-                    <h6 className="app-text">Openchains TechKNOW</h6>
-                    <div className="apps-items">
-                      <a href="#">
-                        <img src="/assets/img/apply-store.png" alt="img" />
-                      </a>
-                      <a href="#">
-                        <img src="/assets/img/play-store.jpg" alt="img" />
-                      </a>
-                    </div>
-                    <div className="social-icon">
-                      <a href={Globals.Facebook}>
-                        <i className="fab fa-facebook-f"></i>
-                      </a>
-                      <a href={Globals.Instagram}>
-                        <i className="fab fa-instagram"></i>
-                      </a>
-                      <a href="#">
-                        <i className="fab fa-twitter"></i>
-                      </a>
-                      <a href={Globals.LinkedIn}>
-                        <i className="fab fa-linkedin-in"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-xl-2 col-lg-5 col-md-4 col-sm-6">
-                <div className="footer-widget-items">
-                  <div className="widget-title">
-                    <h3>Useful Links</h3>
-                  </div>
-                  <ul className="list-items">
-                    <li>
-                      <Link href="/electronics">Electronics</Link>
-                    </li>
-                    <li>
-                      <Link href="/contact">24/7 Support</Link>
-                    </li>
-                    <li>
-                      <Link href="/about">About Us</Link>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div className="col-xl-2 col-lg-4 col-md-4 col-sm-6">
-                <div className="footer-widget-items">
-                  <div className="widget-title">
-                    <h3>About OpenChains</h3>
-                  </div>
-                  <ul className="list-items">
-                    <li>
-                      <Link href="/about">About Us</Link>
-                    </li>
-                    <li>
-                      <Link href="/contact">Legal Notice</Link>
-                    </li>
-                    <li>
-                      <a href="#">Courses</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div className="col-xl-3 col-lg-4 col-md-4">
-                <div className="footer-widget-items">
-                  <div className="widget-title">
-                    <h3>Gallery</h3>
-                  </div>
-                  <div className="footer-gallery">
-                    <div className="gallery-wrap">
-                      <div className="gallery-item">
-                        <div className="thumb">
-                          <a
-                            href="/assets/img/footer/gallery-1.jpg"
-                            className="img-popup"
-                          >
-                            <img
-                              src="/assets/img/footer/gallery-1.jpg"
-                              alt="gallery-img"
-                            />
-                            <div className="icon">
-                              <i className="far fa-plus"></i>
-                            </div>
-                          </a>
-                        </div>
-                        <div className="thumb">
-                          <a
-                            href="/assets/img/footer/gallery-2.jpg"
-                            className="img-popup"
-                          >
-                            <img
-                              src="/assets/img/footer/gallery-2.jpg"
-                              alt="gallery-img"
-                            />
-                            <div className="icon">
-                              <i className="far fa-plus"></i>
-                            </div>
-                          </a>
-                        </div>
-                        <div className="thumb">
-                          <a
-                            href="/assets/img/footer/gallery-3.jpg"
-                            className="img-popup"
-                          >
-                            <img
-                              src="/assets/img/footer/gallery-3.jpg"
-                              alt="gallery-img"
-                            />
-                            <div className="icon">
-                              <i className="far fa-plus"></i>
-                            </div>
-                          </a>
-                        </div>
-                      </div>
-                      <div className="gallery-item">
-                        <div className="thumb">
-                          <a
-                            href="/assets/img/footer/gallery-4.jpg"
-                            className="img-popup"
-                          >
-                            <img
-                              src="/assets/img/footer/gallery-4.jpg"
-                              alt="gallery-img"
-                            />
-                            <div className="icon">
-                              <i className="far fa-plus"></i>
-                            </div>
-                          </a>
-                        </div>
-                        <div className="thumb">
-                          <a
-                            href="/assets/img/footer/gallery-5.jpg"
-                            className="img-popup"
-                          >
-                            <img
-                              src="/assets/img/footer/gallery-5.jpg"
-                              alt="gallery-img"
-                            />
-                            <div className="icon">
-                              <i className="far fa-plus"></i>
-                            </div>
-                          </a>
-                        </div>
-                        <div className="thumb">
-                          <a
-                            href="/assets/img/footer/gallery-6.jpg"
-                            className="img-popup"
-                          >
-                            <img
-                              src="/assets/img/footer/gallery-6.jpg"
-                              alt="gallery-img"
-                            />
-                            <div className="icon">
-                              <i className="far fa-plus"></i>
-                            </div>
-                          </a>
-                        </div>
-                      </div>
-                      <div className="gallery-item">
-                        <div className="thumb">
-                          <a
-                            href="/assets/img/footer/gallery-7.jpg"
-                            className="img-popup"
-                          >
-                            <img
-                              src="/assets/img/footer/gallery-7.jpg"
-                              alt="gallery-img"
-                            />
-                            <div className="icon">
-                              <i className="far fa-plus"></i>
-                            </div>
-                          </a>
-                        </div>
-                        <div className="thumb">
-                          <a
-                            href="/assets/img/footer/gallery-8.jpg"
-                            className="img-popup"
-                          >
-                            <img
-                              src="/assets/img/footer/gallery-8.jpg"
-                              alt="gallery-img"
-                            />
-                            <div className="icon">
-                              <i className="far fa-plus"></i>
-                            </div>
-                          </a>
-                        </div>
-                        <div className="thumb">
-                          <a
-                            href="/assets/img/footer/gallery-9.jpg"
-                            className="img-popup"
-                          >
-                            <img
-                              src="/assets/img/footer/gallery-9.jpg"
-                              alt="gallery-img"
-                            />
-                            <div className="icon">
-                              <i className="far fa-plus"></i>
-                            </div>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            <div className="col-lg-3 col-md-6 col-sm-6">
+              <div className="footer-inner-links var2">
+                <h4 className="text-white">Quick Links</h4>
+                <ul className="list-unstyled p-0 m-0">
+                  <li>
+                    <i className="fa-solid fa-circle" />
+                    <a href="/about" className="d-inline-block">
+                      About Us
+                    </a>
+                  </li>
+                  <li>
+                    <i className="fa-solid fa-circle" />
+                    <a href="/services" className="d-inline-block">
+                      Services
+                    </a>
+                  </li>
+                  <li>
+                    <i className="fa-solid fa-circle" />
+                    <a href="/pricing-calculator" className="d-inline-block">
+                      Pricing calculator
+                    </a>
+                  </li>
+                  <li>
+                    <i className="fa-solid fa-circle" />
+                    <a href="/contact" className="d-inline-block">
+                      Contact Us
+                    </a>
+                  </li>
+                </ul>
               </div>
             </div>
+            <div className="col-lg-3 col-md-6 col-sm-6">
+              <div className="footer-inner-links var3">
+                <h4 className="text-white">Resources</h4>
+                <ul className="list-unstyled p-0 m-0">
+                  <li>
+                    <i className="fa-solid fa-circle" />
+                    <a href="/apis/libraries" className="d-inline-block">
+                      Apis
+                    </a>
+                  </li>
+                  <li>
+                    <i className="fa-solid fa-circle" />
+                    <a href="/lessons/big" className="d-inline-block">
+                      Building Big Apps
+                    </a>
+                  </li>
+                  <li>
+                    <i className="fa-solid fa-circle" />
+                    <a href="/hosting/others" className="d-inline-block">
+                      Cart
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className="col-lg-3 col-md-6 col-sm-6">
+              <div className="footer-inner-links var4">
+                <h4 className="text-white">Mailing Address</h4>
+                <ul className="list-unstyled p-0 mb-0">
+                  <li className="position-relative">
+                    <img
+                      src="assets/images/location-icon.png"
+                      alt="icon"
+                      className="img-fluid"
+                    />{" "}
+                    <a href="https://maps.app.goo.gl/x2i4YdHeDkndHuTD6">
+                      {Globals.Address} <br />
+                      {Globals.City}
+                    </a>
+                  </li>
+                  <li className="position-relative">
+                    <img
+                      src="/assets/images/phone-icon.png"
+                      alt="icon"
+                      className="img-fluid"
+                    />
+                    <a href={`tel:${Globals.Phone}`}>{Globals.Phone}</a>
+                  </li>
+                  <li className="position-relative mb-0">
+                    <img
+                      src="/assets/images/email-icon.png"
+                      alt="icon"
+                      className="img-fluid"
+                    />
+                    <a href={`mailto:${Globals.Email}`}>{Globals.Email}</a>
+                  </li>
+                </ul>
+                {/* footer inner links */}
+              </div>
+              {/* col */}
+            </div>
+            {/* row */}
           </div>
-        </div>
-        <div className="footer-bottom-1">
-          <div className="container">
-            <div className="footer-bottom-wrapper">
-              <p className="wow fadeInUp" data-wow-delay=".3s">
-                © {new Date().getFullYear()} Openchains All rights reserved.
+          <div className="copyright-con float-left w-100 position-relative d-flex align-items-center justify-content-between">
+            <div className="copyright-content">
+              <p className="mb-0 text-white">
+                Copyright {new Date().getFullYear()}
+                <a className="d-inline-block orange-text tw:mx-3!" href="/">
+                  {" "}
+                  Openchains Technologies
+                </a>
+                All Rights Reserved
               </p>
-              <ul className="footer-menu wow fadeInUp" data-wow-delay=".5s">
-                <li>
-                  <a href="#">Privacy</a>
-                </li>
-                <li>
-                  <a href="/terms">Terms</a>
-                </li>
-                <li>
-                  <a href="#">Site Map</a>
-                </li>
-              </ul>
+              {/* copyright content */}
             </div>
+            <ul className="list-unstyled p-0 m-0 d-flex align-items-center social-icon">
+              <li>
+                <a href={Globals.Facebook}>
+                  <i className="fa-brands fa-facebook-f ml-0" />
+                </a>
+              </li>
+              <li>
+                <a href={Globals.LinkedIn}>
+                  <i className="fa-brands fa-linkedin-in" />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i className="fa-brands fa-x-twitter" />
+                </a>
+              </li>
+              <li>
+                <a href={Globals.Facebook} className="mr-0">
+                  <i className="fa-brands fa-facebook" />
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
-      </footer>
+      </section>
     </>
   );
 }

@@ -1,0 +1,274 @@
+/*  */
+
+.wrapper1545 {
+  max-width: 1545px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.primary-button a,
+.primary-button button {
+  background-color: var(--secondary--color);
+  padding: 0;
+  min-width: 190px;
+  height: 50px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 48px;
+  width: 100%;
+  text-decoration: none;
+  color: var(--magento--color);
+  cursor: pointer;
+  border: 1px solid var(--magento--color);
+  border-radius: 100px;
+}
+
+.primary-button a:hover,
+.primary-button button:hover {
+  background-color: var(--magento--color);
+  color: var(--secondary--color);
+  transition: ease-in-out 0.6s;
+}
+
+.secondary-button a,
+.secondary-button button {
+  background-color: var(--accent--color);
+  padding: 0;
+  min-width: 190px;
+  height: 50px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 48px;
+  width: 100%;
+  text-decoration: none;
+  color: var(--secondary--color);
+  cursor: pointer;
+  border-radius: 100px;
+  border: none;
+}
+
+.secondary-button a:hover,
+.secondary-button button:hover {
+  background-color: var(--secondary--color);
+  color: var(--magento--color);
+  transition: ease-in-out 0.6s;
+}
+
+.elementary-button a,
+.elementary-button button {
+  background-color: var(--magento--color);
+  padding: 0;
+  min-width: 190px;
+  height: 50px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 48px;
+  width: 100%;
+  text-decoration: none;
+  color: var(--secondary--color);
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 100px;
+}
+
+.elementary-button a:hover,
+.elementary-button button:hover {
+  background-color: transparent;
+  color: var(--magento--color);
+  transition: ease-in-out 0.6s;
+  border: 1px solid var(--magento--color);
+}
+
+.primary-button a i,
+.secondary-button a i,
+.elementary-button a i,
+.primary-button button i,
+.secondary-button button i,
+.elementary-button button i {
+  font-size: 14px;
+}
+
+h1 {
+  font-size: 60px;
+  font-weight: 800;
+  line-height: 72px;
+  color: var(--magento--color);
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 47px;
+  color: var(--magento--color);
+}
+
+h3 {
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 36px;
+  color: var(--magento--color);
+}
+
+h4 {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+  color: var(--magento--color);
+}
+
+h5 {
+  font-size: 20px;
+  line-height: 27px;
+  font-weight: 700;
+  color: var(--magento--color);
+}
+
+h6 {
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 400;
+  color: var(--magento--color);
+}
+
+.spacer {
+  float: left;
+  width: 100%;
+  height: 100px;
+}
+
+.text-size-16,
+.font-size-16 {
+  font-size: 16px;
+}
+
+.font-size-18 {
+  font-size: 18px;
+}
+
+.font-size-14 {
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.font-size-12 {
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.padding-top160 {
+  padding-top: 160px;
+}
+
+.padding-bottom160 {
+  padding-bottom: 160px;
+}
+
+.padding-top {
+  padding-top: 136px;
+}
+
+.padding-bottom {
+  padding-bottom: 136px;
+}
+
+.padding-top100 {
+  padding-top: 100px;
+}
+
+.padding-bottom100 {
+  padding-bottom: 100px;
+}
+
+.special-text {
+  color: var(--orange--family--color);
+  font-size: 18px;
+  line-height: 28px;
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+
+.min-height-auto {
+  min-height: auto !important;
+}
+
+.font-weight-600 {
+  font-weight: 600;
+}
+
+.font-size-20 {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.gradient {
+  /* background: linear-gradient(to bottom, #d6f4ec 0%, #a770de 100%); */
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#d6f4ec+0,a770de+73,a770de+100 */
+  /* background-image: linear-gradient(330deg, rgba(214, 244, 236, 30%) 0%, rgba(214, 244, 236, 30%) 40%, rgba(167, 112, 222, 30%) 100%); */
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+/* .reverse-gradient {
+    background-image: linear-gradient(193deg, rgba(214, 244, 236, 30%) 0%, rgba(214, 244, 236, 30%) 40%, rgba(167, 112, 222, 30%) 100%);
+} */
+
+.z-index-1 {
+  z-index: 1;
+}
+
+.font-weight-500 {
+  font-weight: 500;
+}
+
+.background-fff {
+  background-color: var(--secondary--color) !important;
+}
+
+.background-5b21af {
+  background-color: var(--purple--color);
+}
+
+.background-f3f0fb {
+  background-color: var(--bg--color);
+}
+
+.orange-text {
+  color: var(--accent--color);
+}
+
+.purple-text {
+  color: var(--primary--color);
+}
+
+.magento-text {
+  color: var(--magento--color);
+}
+
+.black-text {
+  color: var(--black--color);
+}
+
+.inter-font {
+  font-family: "Inter", serif;
+}
+
+.poppins-font {
+  font-family: "Poppins", "sans";
+}
+
+.background-primary {
+  background-color: var(--primary--color);
+}
+
+.magento-bg {
+  background-color: var(--magento--color);
+}
+
+.text-size-18 {
+  font-size: 18px;
+  line-height: 30px;
+}
