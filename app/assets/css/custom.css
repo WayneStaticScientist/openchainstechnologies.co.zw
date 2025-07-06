@@ -509,7 +509,6 @@ span {
   height: 20px;
   width: 20px;
   content: "\f00d";
-  background-image: url("/assets/images/close.html");
 }
 
 #search .close {
@@ -2834,7 +2833,6 @@ span {
 }
 
 .most-popular-tld-con {
-  background-image: url(/assets/images/most-popular-tld-banner.html);
   background-repeat: no-repeat;
   background-size: cover;
 }

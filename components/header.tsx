@@ -8,7 +8,7 @@ export default function Header() {
       <header className="w-100 float-left header-con main-box position-relative">
         <div className="container">
           <nav className="navbar navbar-expand-lg navbar-light">
-            <a className="navbar-brand" href="index-2.html">
+            <a className="navbar-brand" href="/">
               <figure className="mb-0">
                 <img src="/assets/images/logo.png" alt="logo-icon" />
               </figure>

@@ -45,7 +45,7 @@ export default function Experience2() {
                   businesses with cutting-edge technology.
                 </p>
                 <div className="secondary-button d-inline-block">
-                  <a href="contact.html" className="d-inline-block">
+                  <a href="/contact" className="d-inline-block">
                     Contact Us <i className="fas fa-arrow-right ml-2" />
                   </a>
                 </div>
