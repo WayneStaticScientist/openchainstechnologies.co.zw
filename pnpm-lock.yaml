@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@emailjs/browser':
+        specifier: ^4.4.1
+        version: 4.4.1
       '@emailjs/react-native':
         specifier: ^4.2.2
         version: 4.2.2(react-native@0.80.0(@babel/core@7.27.7)(@types/react@19.1.8)(react@19.1.0))
