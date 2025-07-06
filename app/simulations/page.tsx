@@ -32,7 +32,13 @@ export default function SimulationServices() {
         <meta name="author" content="OpenChains" />
       </Head>
       <Header />
-      <BreadCrump page={"simulationservices"} title={"Simulation Services"} />
+      <BreadCrump
+        page={"simulationservices"}
+        title={"Simulation Services"}
+        summary={
+          "Explore our advanced simulation and modeling services, including 3D object creation, engineering simulations, and animations. We help visualize and test your concepts with precision and detail."
+        }
+      />
       <PassedDetails
         img={"/assets/img/sim.jpg"}
         title={"Simulation Services"}

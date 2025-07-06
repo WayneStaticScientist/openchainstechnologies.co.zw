@@ -1,35 +1,68 @@
 "use client";
-import { Globals } from "@/utils/globals";
-import { SendEmail } from "@/utils/net";
-import React, { useEffect, useState } from "react";
-import toast, { Toaster } from "react-hot-toast";
+import emailjs from "@emailjs/browser";
 import { CgSpinner } from "react-icons/cg";
+import toast, { Toaster } from "react-hot-toast";
+import React, { useEffect, useRef, useState } from "react";
+
 export default function Contact() {
+  const form = useRef<HTMLFormElement>(null);
   const [name, setName] = React.useState("");
+  const [time, setTime] = React.useState(new Date().toDateString());
   const [lastName, setLastName] = React.useState("");
   const [email, setEmail] = React.useState("");
   const [message, setMessage] = React.useState("");
   const [phone, setPhone] = React.useState("");
   const [sent, isSent] = useState(false);
   const [loading, setIsLoading] = useState(false);
-  useEffect(() => {}, []);
-  const sendEmail = async () => {
-    if (message.trim().length < 5) return toast.error("message too short");
-    setIsLoading(true);
-    try {
-      await SendEmail({
-        name: name + " " + lastName,
-        email,
-        phone,
-        message,
+  useEffect(() => {
+    if (process.env.NEXT_PUBLIC_PUBLIC_KEY) {
+      emailjs.init({
+        publicKey: process.env.NEXT_PUBLIC_PUBLIC_KEY,
       });
-      isSent(true);
-    } catch (e) {
-      toast.error("There was error sending email");
-    } finally {
-      setIsLoading(false);
+    } else {
+      console.error(
+        "EmailJS Public Key is not defined. Make sure NEXT_PUBLIC_EMAILJS_PUBLIC_KEY is set in your .env.local file."
+      );
     }
+  }, []);
+  const sendEmail = async (f: React.FormEvent<HTMLFormElement>) => {
+    f.preventDefault();
+    if (name.trim().length < 3) return toast.error("name too short");
+    if (message.trim().length < 5) return toast.error("message too short");
+    if (!form.current) return;
+    if (form.current) {
+      setIsLoading(true);
+      emailjs
+        .sendForm(
+          process.env.NEXT_PUBLIC_SERVICE_ID as string,
+          process.env.NEXT_PUBLIC_TEMPLATE_ID as string,
+          form.current
+        )
+        .then(
+          () => {
+            toast.success("Your message has been sent successfully!");
+            setName("");
+            setLastName("");
+            setEmail("");
+            setPhone("");
+            setMessage("");
+            isSent(true);
+          },
+          (e) => {
+            console.log(e);
+            toast.error("Failed to send message. Please try again.");
+          }
+        )
+        .finally(() => {
+          setIsLoading(false);
+        });
+    } else {
+      console.error("Form reference is not available.");
+      toast.error("An internal error occurred. Please try again later.");
+    }
+    await new Promise((resolve) => setTimeout(resolve, 30000)); // Wait for 30 seconds
   };
+
   return (
     <>
       <Toaster position="top-center" reverseOrder={false} />
@@ -65,13 +98,10 @@ export default function Contact() {
               <div className="row">
                 <div className="col-xl-10 col-lg-10 mr-auto ml-auto">
                   <form
-                    className="main-form text-center"
-                    method="post"
-                    onSubmit={(e) => {
-                      e.preventDefault();
-                      sendEmail();
-                    }}
+                    ref={form}
+                    onSubmit={sendEmail}
                     id="contactpage"
+                    className="main-form text-center"
                   >
                     <ul className="list-unstyled p-0 float-left w-100 mb-0">
                       <li>
@@ -122,15 +152,16 @@ export default function Contact() {
                         <textarea
                           placeholder="Message"
                           rows={6}
-                          name="msg"
+                          name="message"
                           value={message}
                           onChange={(e) => setMessage(e.target.value)}
                           required
                         />
                       </li>
                     </ul>
+                    <input type="hidden" value={time} name="time" />
                     <div className="secondary-button d-inline-block">
-                      <button type="submit" id="submit">
+                      <button id="submit">
                         {loading && (
                           <CgSpinner className=" tw:animate-spin tw:text-center tw:w-full" />
                         )}

@@ -12,6 +12,7 @@ export default function TermsAndConditions() {
       <BreadCrump
         page={"Terms And Conditions"}
         title={"Terms And Conditions"}
+        summary={""}
       />
       <Terms />
       <Footer />
