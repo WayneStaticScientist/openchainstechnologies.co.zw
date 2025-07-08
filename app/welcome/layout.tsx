@@ -2,9 +2,9 @@
 import SplashLoader from "@/components/loader";
 import { getUserFromStore } from "@/utils/user-store";
 import { useRouter } from "next/navigation";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
-export default function LayoutLessons({
+export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;

@@ -11,6 +11,7 @@ import "./assets/css/superclasses.css";
 import "./assets/css/owl.carousel.min.css";
 import "./assets/bootstrap/bootstrap.min.css";
 import "./assets/css/owl.theme.default.min.css";
+import { Toaster } from "react-hot-toast";
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://openchains.shop";
 export const metadata: Metadata = {
   title: {
@@ -61,6 +62,7 @@ export default function RootLayout({
         />
       </head>
       <body>
+        <Toaster />
         {children}
         <Script
           src="/assets/js/jquery.min.js"
