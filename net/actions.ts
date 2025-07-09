@@ -23,11 +23,15 @@ export async function RegisterUser(user: UserType) {
   if (userModel) {
     throw new Error(`User with email ${user.email} already exists`);
   }
+  try {
+    userModel = await User.create(user);
+    userModel.password = undefined;
+    const token = generateToken(userModel._id);
+    return { user: userModel.toObject(), token };
+  } catch (e) {
+    throw e;
+  }
   // Create new user
-  userModel = await User.create(user);
-  userModel.password = undefined;
-  const token = generateToken(userModel._id);
-  return { user: userModel.toObject(), token };
 }
 
 export async function LoginUser(user: UserType) {
