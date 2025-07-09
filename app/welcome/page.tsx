@@ -21,7 +21,7 @@ export default function WelcomePage() {
           </h6>
           {user.fullName}
           <p className="tw:text-lg! tw:text-gray-700! tw:leading-relaxed!">
-            We're thrilled to have you join our community of innovators.
+            We're thrilled to have you join our community of innovators!.
           </p>
         </div>
         <p className="tw:text-gray-600! tw:text-md! tw:mb-6!">
