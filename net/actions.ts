@@ -27,7 +27,7 @@ export async function RegisterUser(user: UserType) {
   userModel = await User.create(user);
   userModel.password = undefined;
   const token = generateToken(userModel._id);
-  return { user: userModel, token };
+  return { user: userModel.toObject(), token };
 }
 
 export async function LoginUser(user: UserType) {
@@ -46,7 +46,7 @@ export async function LoginUser(user: UserType) {
   // Generate token
   userModel.password = undefined;
   const token = generateToken(userModel._id);
-  return { user: userModel, token };
+  return { user: userModel.toObject(), token };
 }
 
 // --- File: pages/api/auth/me.ts ---
@@ -66,7 +66,7 @@ export async function getUser(token: string) {
   if (!user) {
     throw new Error(`User not found`);
   }
-  return user;
+  return user.toObject();
 }
 
 // --- File: pages/api/auth/logout.ts ---

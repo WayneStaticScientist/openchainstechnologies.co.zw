@@ -1,7 +1,6 @@
 import mongoose from "mongoose";
 
-const MONGODB_URI =
-  process.env.NEXT_PUBLIC_DB_URL || "mongodb://localhost:27017/openchains";
+const MONGODB_URI = process.env.NEXT_PUBLIC_DB_URL ?? "";
 
 if (!MONGODB_URI) {
   throw new Error(
@@ -21,6 +20,7 @@ if (!cached.mongoose) {
 }
 
 async function dbConnect() {
+  console.log("url is ", MONGODB_URI);
   if (cached.mongoose.conn) {
     return cached.mongoose.conn;
   }
