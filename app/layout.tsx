@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     title: "Openchains Technologies",
   },
   description:
-    "Websites development, apps development,games development & custom software for businesses & individuals.OpenChains Technologies: digital solutions in Zimbabwe",
+    "Websites development, apps development,games development & custom software for businesses & individuals.OpenChains Technologies digital solutions in Zimbabwe",
   metadataBase: new URL(baseUrl),
 };
 
