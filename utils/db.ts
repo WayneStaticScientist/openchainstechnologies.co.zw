@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 const MONGODB_URI =
-  process.env.MONGODB_URI || "mongodb://localhost:27017/openchains";
+  process.env.NEXT_PUBLIC_DB_URL || "mongodb://localhost:27017/openchains";
 
 if (!MONGODB_URI) {
   throw new Error(
