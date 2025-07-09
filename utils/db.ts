@@ -20,7 +20,6 @@ if (!cached.mongoose) {
 }
 
 async function dbConnect() {
-  console.log("url is ", MONGODB_URI);
   if (cached.mongoose.conn) {
     return cached.mongoose.conn;
   }
