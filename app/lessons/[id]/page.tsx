@@ -1,5 +1,5 @@
 import React from "react";
 
 export default function LessonsAppId() {
-  return <div></div>;
+  return <div>[id]</div>;
 }
