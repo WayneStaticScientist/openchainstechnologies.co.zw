@@ -39,7 +39,8 @@ const LoginPage: React.FC = () => {
     const user = Object.fromEntries(formdata) as User;
     try {
       const login = await LoginUser(user);
-      storeBothUserAndToken(login.user, login.token);
+      if (login.error) throw new Error(login.message!);
+      storeBothUserAndToken(login.user!, login.token!);
       setMessage("Login successful! Welcome to OpenchainsTechnologies.");
       setMessageType("success");
       router.push("/welcome");

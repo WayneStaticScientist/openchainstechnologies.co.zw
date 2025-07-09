@@ -35,8 +35,9 @@ const RegisterPage: React.FC = () => {
     const formdata = new FormData(e.currentTarget);
     const user = Object.fromEntries(formdata) as User;
     try {
-      const login = await RegisterUser(user);
-      storeBothUserAndToken(login.user, login.token);
+      const register = await RegisterUser(user);
+      if (register.error) throw new Error(register.message!);
+      storeBothUserAndToken(register.user!, register.token!);
       setMessage("Login successful! Welcome to OpenchainsTechnologies.");
       setMessageType("success");
       toast.success("Login successful");
