@@ -1,45 +1,20 @@
+"use client";
 import "./style.css";
 import "./assets/css/shop.css";
 import "./assets/css/blog.css";
 import "./assets/css/custom.css";
 import Script from "next/script";
 import "./assets/css/animate.css";
-import type { Metadata } from "next";
 import "./assets/css/responsive.css";
 import "./assets/css/priceslider.css";
 import "./assets/css/superclasses.css";
+import { Toaster } from "react-hot-toast";
 import "./assets/css/owl.carousel.min.css";
 import "./assets/bootstrap/bootstrap.min.css";
 import "./assets/css/owl.theme.default.min.css";
-import { Toaster } from "react-hot-toast";
+import React, { useEffect } from "react";
+import { SplashRoboticLoader } from "@/components/splash-loader";
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://openchains.shop";
-export const metadata: Metadata = {
-  title: {
-    template: "%s | OpenChains Technologies",
-    default: "OpenChains Technologies - World Of Innovating Technologies",
-  },
-  keywords: [
-    "electronics",
-    "web design",
-    "system design",
-    "web technologies",
-    "AI",
-    "chatbots",
-    "openchains",
-    "zimbabwe",
-    "websites",
-  ],
-  openGraph: {
-    siteName: "Openchains Technologies",
-    url: baseUrl,
-    type: "website",
-    title: "Openchains Technologies",
-  },
-  description:
-    "Websites development, apps development,games development & custom software for businesses & individuals.OpenChains Technologies: digital solutions in Zimbabwe",
-  metadataBase: new URL(baseUrl),
-};
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -52,6 +27,10 @@ export default function RootLayout({
     alternateName: ["Openchains", "OpenTech"],
     url: baseUrl,
   };
+  const [loading, setLoading] = React.useState(true);
+  useEffect(() => {
+    setLoading(false);
+  }, []);
   return (
     <html lang="en">
       <head>
@@ -60,10 +39,25 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
+        <title>
+          OpenChains Technologies - World Of Innovating Technologies
+        </title>
+        <meta
+          name="keywords"
+          content="electronics, web design, system design, web technologies, AI, chatbots, openchains, zimbabwe, websites"
+        />
+        <meta
+          name="description"
+          content="Websites development, apps development, games development & custom software for businesses & individuals. OpenChains Technologies: digital solutions in Zimbabwe"
+        />
+        <meta property="og:site_name" content="Openchains Technologies" />
+        <meta property="og:url" content={baseUrl} />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Openchains Technologies" />
       </head>
       <body>
         <Toaster />
-        {children}
+        {loading ? <SplashRoboticLoader /> : children}
         <Script
           src="/assets/js/jquery.min.js"
           strategy="afterInteractive"

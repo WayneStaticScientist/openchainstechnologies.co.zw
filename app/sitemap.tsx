@@ -10,6 +10,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
     },
     {
+      url: `${baseUrl}/founder`,
+      priority: 1,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+    },
+    {
       url: `${baseUrl}/about`,
       priority: 0.9,
       lastModified: new Date(),
@@ -47,6 +53,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/register`,
+      priority: 0.7,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+    },
+    {
+      url: `${baseUrl}/lessons/html/introduction`,
       priority: 0.7,
       lastModified: new Date(),
       changeFrequency: "weekly",

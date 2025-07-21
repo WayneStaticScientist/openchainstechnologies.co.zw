@@ -13,7 +13,7 @@ export default function HeroSection() {
           />
         </figure>
         <div className="container">
-          <div className="owl-carousel owl-theme">
+          <div className="">
             {HeroDisplay.map((hero, index) => (
               <div className="item" key={index}>
                 <div className="row align-items-center">

@@ -130,6 +130,9 @@ export default function Header() {
                     className="dropdown-menu"
                     aria-labelledby="navbarDropdown4"
                   >
+                    <a className="dropdown-item" href="/founder">
+                      Founder
+                    </a>
                     <a className="dropdown-item" href="#">
                       Openchains News
                     </a>
