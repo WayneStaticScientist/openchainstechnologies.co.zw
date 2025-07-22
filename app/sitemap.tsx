@@ -63,5 +63,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: "weekly",
     },
+    {
+      url: `${baseUrl}/lessons/html/examples/loading-spinner`,
+      priority: 0.7,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+    },
   ];
 }

@@ -13,8 +13,6 @@ export default function HtmlTutorialsPage() {
       <Head>
         <title>HTML Tutorials - Openchains Technologies</title>
       </Head>
-      <TutorialsTopBar />
-      <Header />
       <section
         className="singleblog-section blogpage-section gradient"
         id="single"
