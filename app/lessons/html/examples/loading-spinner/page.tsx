@@ -8,7 +8,7 @@ export default function LoadingSpinner() {
         <div className="main-box">
           <figure className="image1 mb-3">
             <img
-              src="https://placehold.co/1200x600/E0F2FE/1E40AF?text=Dynamic+Loading+Spinners"
+              src="/assets/img/examples/animated-loader.gif"
               alt="Animated Loading Spinner"
               className="img-fluid tw:rounded-lg tw:shadow-lg"
               loading="lazy"

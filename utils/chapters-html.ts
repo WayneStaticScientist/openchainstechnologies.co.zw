@@ -1,51 +1,51 @@
 export const HtmlChapterFootMap = [
   {
     title: "Introduction to Web Development & HTML Basics",
-    path: "/html/introduction",
+    path: "/lessons/html/introduction",
   },
   {
     title: "HTML Elements and Attributes",
-    path: "/html/elements-attributes",
+    path: "/lessons/html/elements-attributes",
   },
   {
     title: "Text Formatting",
-    path: "/html/text-formatting",
+    path: "/lessons/html/text-formatting",
   },
   {
     title: "Links and Navigation",
-    path: "/html/links-navigation",
+    path: "/lessons/html/links-navigation",
   },
   {
     title: "Images and Multimedia",
-    path: "/html/images-multimedia",
+    path: "/lessons/html/images-multimedia",
   },
   {
     title: "Lists",
-    path: "/html/lists",
+    path: "/lessons/html/lists",
   },
   {
     title: "Tables",
-    path: "/html/tables",
+    path: "/lessons/html/tables",
   },
   {
     title: "Forms",
-    path: "/html/forms",
+    path: "/lessons/html/forms",
   },
   {
     title: "Semantic HTML5",
-    path: "/html/semantic-html5",
+    path: "/lessons/html/semantic-html5",
   },
   {
     title: "Metadata",
-    path: "/html/metadata",
+    path: "/lessons/html/metadata",
   },
   {
     title: "Comments (HTML)",
-    path: "/html/comments",
+    path: "/lessons/html/comments",
   },
   {
     title: "HTML Best Practices & Accessibility",
-    path: "/html/best-practices-accessibility",
+    path: "/lessons/html/best-practices-accessibility",
   },
   {
     title: "Introduction to CSS",

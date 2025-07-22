@@ -1,10 +1,22 @@
 "use client";
 import React, { useState } from "react";
-import parse from "html-react-parser";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { a11yDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 export default function CodeReviewPager({ code }: { code: string }) {
+  const [highlighterHeight, setHighlighterHeight] = useState(0);
+  const [highlighterWidth, setHighlighterWidth] = useState(0);
+  const highlighterRef = React.useRef<HTMLDivElement>(null);
+
+  React.useEffect(() => {
+    if (highlighterRef.current) {
+      const height = highlighterRef.current.scrollHeight;
+      const width = highlighterRef.current.scrollWidth;
+      setHighlighterWidth(width);
+      setHighlighterHeight(height);
+    }
+  }, [code]);
+
   const [activeTab, setActiveTab] = useState("code");
   return (
     <div className="tw:w-full! tw:max-w-4xl! tw:mx-auto! tw:bg-white! tw:rounded-lg! tw:shadow-lg! tw:overflow-hidden! tw:my-8!">
@@ -31,18 +43,32 @@ export default function CodeReviewPager({ code }: { code: string }) {
         </button>
       </div>
       {activeTab === "code" ? (
-        <SyntaxHighlighter
-          language="html"
-          style={a11yDark}
-          customStyle={{
-            fontFamily: "sans-serif",
-            fontSize: 20,
+        <div
+          ref={highlighterRef}
+          style={{
+            height: `${highlighterHeight}px`,
+            overflow: "hidden",
+            transition: "height 0.3s ease-in-out",
           }}
         >
-          {code}
-        </SyntaxHighlighter>
+          <SyntaxHighlighter
+            language="html"
+            style={a11yDark}
+            wrapLongLines={true}
+            customStyle={{
+              fontFamily: "sans-serif",
+              fontSize: 20,
+            }}
+          >
+            {code}
+          </SyntaxHighlighter>
+        </div>
       ) : (
-        <div> {parse(code)}</div>
+        <iframe
+          srcDoc={code}
+          height={highlighterHeight}
+          width={highlighterWidth}
+        />
       )}
     </div>
   );

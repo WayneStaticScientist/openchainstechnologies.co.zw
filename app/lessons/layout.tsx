@@ -23,7 +23,9 @@ export default function LayoutLessons({
     if (user) {
       setLoading(false);
     } else {
-      router.push("/login");
+      router.push(
+        `/login?redirect=${encodeURIComponent(window.location.pathname)}`
+      );
     }
   }, []);
   return (

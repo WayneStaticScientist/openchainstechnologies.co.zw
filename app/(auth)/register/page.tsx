@@ -3,7 +3,7 @@ import { RegisterUser } from "@/net/actions";
 import { User } from "@/types";
 import { storeBothUserAndToken } from "@/utils/user-store";
 import Head from "next/head";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import React, { useState } from "react";
 import toast from "react-hot-toast";
 import { CgSpinner } from "react-icons/cg";
@@ -23,6 +23,8 @@ export default function App() {
 }
 
 const RegisterPage: React.FC = () => {
+  const searchParams = useSearchParams();
+  const redirect = searchParams.get("redirect");
   const router = useRouter();
   const [message, setMessage] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(false);
@@ -41,6 +43,10 @@ const RegisterPage: React.FC = () => {
       setMessage("Login successful! Welcome to OpenchainsTechnologies.");
       setMessageType("success");
       toast.success("Login successful");
+      if (redirect) {
+        router.push(redirect);
+        return;
+      }
       router.push("/welcome");
     } catch (e: any) {
       toast.error(e.message ?? "Something went wrong");
@@ -185,7 +191,7 @@ const RegisterPage: React.FC = () => {
       <div className="tw:mt-8 tw:text-center tw:text-sm tw:text-gray-600">
         Already have an account?{" "}
         <a
-          href="/login"
+          href={`/login?redirect=${redirect ?? ""}`}
           className="tw:font-medium tw:text-indigo-600 tw:hover:text-indigo-500 tw:transition tw:duration-200"
         >
           Log In

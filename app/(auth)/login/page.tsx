@@ -1,12 +1,12 @@
 "use client";
-import { LoginUser } from "@/net/actions";
-import { User } from "@/types";
-import { storeBothUserAndToken } from "@/utils/user-store";
 import Head from "next/head";
-import { useRouter } from "next/navigation";
-import React, { useState } from "react";
+import { User } from "@/types";
+import { LoginUser } from "@/net/actions";
 import toast from "react-hot-toast";
+import React, { useState } from "react";
 import { CgSpinner } from "react-icons/cg";
+import { redirect, useRouter, useSearchParams } from "next/navigation";
+import { storeBothUserAndToken } from "@/utils/user-store";
 
 // Main App component that renders the LoginPage
 export default function App() {
@@ -24,6 +24,8 @@ export default function App() {
 
 // LoginPage component
 const LoginPage: React.FC = () => {
+  const searchParams = useSearchParams();
+  const redirect = searchParams.get("redirect");
   const router = useRouter();
   const [loading, setLoading] = useState(false);
   const [email, setEmail] = useState<string>("");
@@ -35,6 +37,7 @@ const LoginPage: React.FC = () => {
     e.preventDefault();
     if (loading) return;
     setLoading(true);
+
     const formdata = new FormData(e.currentTarget);
     const user = Object.fromEntries(formdata) as User;
     try {
@@ -43,8 +46,12 @@ const LoginPage: React.FC = () => {
       storeBothUserAndToken(login.user!, login.token!);
       setMessage("Login successful! Welcome to OpenchainsTechnologies.");
       setMessageType("success");
-      router.push("/welcome");
       toast.success("Login successful");
+      if (redirect) {
+        router.push(redirect);
+        return;
+      }
+      router.push("/welcome");
     } catch (e: any) {
       toast.error(e.message ?? "Something went wrong");
       setMessage(e.message ?? "Something went wrong");
@@ -160,7 +167,7 @@ const LoginPage: React.FC = () => {
       <div className="tw:mt-8 tw:text-center tw:text-sm tw:text-gray-600">
         Don't have an account?{" "}
         <a
-          href="/register"
+          href={`/register?redirect=${redirect ?? ""}`}
           className="tw:font-medium tw:text-indigo-600 tw:hover:text-indigo-500 tw:transition tw:duration-200"
         >
           Sign up

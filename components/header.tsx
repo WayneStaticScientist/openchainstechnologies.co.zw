@@ -88,7 +88,10 @@ export default function Header() {
                     className="dropdown-menu"
                     aria-labelledby="navbarDropdown5"
                   >
-                    <a className="dropdown-item" href="/lessons/html">
+                    <a
+                      className="dropdown-item"
+                      href="/lessons/html/introduction"
+                    >
                       Html and Css
                     </a>
                     <a className="dropdown-item" href="/lessons/javascript">
