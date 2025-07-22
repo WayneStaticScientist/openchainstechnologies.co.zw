@@ -1,5 +1,8 @@
 import React from "react";
 import CodeReviewPager from "@/components/tutorials/tutorial-slider";
+import PageNavigationButtons from "@/components/navigations-button";
+import { Html } from "next/document";
+import { HtmlChapterFootMap } from "@/utils/chapters-html";
 const section1 = `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,6 +27,7 @@ const section1 = `<!DOCTYPE html>
 </body>
 </html>`;
 export default function HtmlIntroPage() {
+  const page = 0;
   return (
     <>
       <div className="col-lg-8 col-md-12 col-sm-12 col-12">
@@ -280,6 +284,12 @@ export default function HtmlIntroPage() {
               <p className="tw:text-gray-700! tw:leading-relaxed! tw:mt-6! tw:font-semibold!">
                 Ready to dive deeper? Let's start building!
               </p>
+              <PageNavigationButtons
+                next={{
+                  title: HtmlChapterFootMap[page + 1].title,
+                  path: HtmlChapterFootMap[page + 1].path,
+                }}
+              />
             </section>
           </div>
         </div>

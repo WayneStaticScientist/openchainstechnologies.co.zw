@@ -64,6 +64,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
     },
     {
+      url: `${baseUrl}/lessons/html/elements-attributes`,
+      priority: 0.7,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+    },
+    {
+      url: `${baseUrl}/lessons/html/links-navigation`,
+      priority: 0.7,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+    },
+    {
+      url: `${baseUrl}/lessons/html/text-formatting`,
+      priority: 0.7,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+    },
+    {
+      url: `${baseUrl}/lessons/html/images-multimedia`,
+      priority: 0.7,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+    },
+    {
       url: `${baseUrl}/lessons/html/examples/loading-spinner`,
       priority: 0.7,
       lastModified: new Date(),

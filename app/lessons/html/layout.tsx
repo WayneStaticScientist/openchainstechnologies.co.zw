@@ -1,3 +1,4 @@
+"use client";
 import { HtmlChapterFootMap } from "@/utils/chapters-html";
 import { Globals } from "@/utils/globals";
 import React from "react";
@@ -9,6 +10,12 @@ export default function layout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const [currentPath, setCurrentPath] = React.useState("");
+  React.useEffect(() => {
+    if (typeof window !== "undefined") {
+      setCurrentPath(window.location.pathname);
+    }
+  }, [window.location.pathname]);
   return (
     <>
       {children}
@@ -18,10 +25,16 @@ export default function layout({
           <ul className="list-unstyled mb-0">
             {HtmlChapterFootMap.map((e, i) => (
               <li key={i} className="text-size-16">
-                <a href={e.path} className="tw:flex tw:gap-3">
-                  <span>{i + 1}</span>
-                  {e.title}
-                </a>
+                {currentPath === e.path ? (
+                  <span className="text-decoration-underline">
+                    <span>{i + 1}</span> {e.title}
+                  </span>
+                ) : (
+                  <a href={e.path} className="tw:flex tw:gap-3">
+                    <span>{i + 1}</span>
+                    {e.title}
+                  </a>
+                )}
               </li>
             ))}
           </ul>
