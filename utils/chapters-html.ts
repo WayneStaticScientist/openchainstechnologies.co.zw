@@ -49,127 +49,127 @@ export const HtmlChapterFootMap = [
   },
   {
     title: "Introduction to CSS",
-    path: "/css/introduction",
+    path: "/lessons/html/css-introduction",
   },
   {
     title: "CSS Selectors and Specificity",
-    path: "/css/selectors-specificity",
+    path: "/lessons/html/selectors-specificity",
   },
   {
     title: "Basic Selectors",
-    path: "/css/basic-selectors",
+    path: "/lessons/html/basic-selectors",
   },
   {
     title: "Combinators",
-    path: "/css/combinators",
+    path: "/lessons/html/combinators",
   },
   {
     title: "Attribute Selectors",
-    path: "/css/attribute-selectors",
+    path: "/lessons/html/attribute-selectors",
   },
   {
     title: "Pseudo-classes",
-    path: "/css/pseudo-classes",
+    path: "/lessons/html/pseudo-classes",
   },
   {
     title: "Pseudo-elements",
-    path: "/css/pseudo-elements",
+    path: "/lessons/html/pseudo-elements",
   },
   {
     title: "Specificity (CSS)",
-    path: "/css/specificity",
+    path: "/lessons/html/specificity",
   },
   {
     title: "The CSS Box Model",
-    path: "/css/box-model",
+    path: "/lessons/html/box-model",
   },
   {
     title: "Styling Text and Fonts",
-    path: "/css/text-fonts",
+    path: "/lessons/html/text-fonts",
   },
   {
     title: "Colors, Backgrounds, and Borders",
-    path: "/css/colors-backgrounds-borders",
+    path: "/lessons/html/colors-backgrounds-borders",
   },
   {
     title: "CSS Layout Techniques",
-    path: "/css/layout-techniques",
+    path: "/lessons/html/layout-techniques",
   },
   {
     title: "Display Property",
-    path: "/css/display-property",
+    path: "/lessons/html/display-property",
   },
   {
     title: "Positioning",
-    path: "/css/positioning",
+    path: "/lessons/html/positioning",
   },
   {
     title: "Floats and Clearing",
-    path: "/css/floats-clearing",
+    path: "/lessons/html/floats-clearing",
   },
   {
     title: "Flexbox (Flexible Box Layout)",
-    path: "/css/flexbox",
+    path: "/lessons/html/flexbox",
   },
   {
     title: "CSS Grid Layout",
-    path: "/css/css-grid",
+    path: "/lessons/html/css-grid",
   },
   {
     title: "Responsive Web Design",
-    path: "/css/responsive-design",
+    path: "/lessons/html/responsive-design",
   },
   {
     title: "Media Queries",
-    path: "/css/media-queries",
+    path: "/lessons/html/media-queries",
   },
   {
     title: "CSS Transitions and Animations",
-    path: "/css/transitions-animations",
+    path: "/lessons/html/transitions-animations",
   },
   {
     title: "Transitions",
-    path: "/css/transitions",
+    path: "/lessons/html/transitions",
   },
   {
     title: "Transformations (2D & 3D)",
-    path: "/css/transformations",
+    path: "/lessons/html/transformations",
   },
   {
     title: "Animations",
-    path: "/css/animations",
+    path: "/lessons/html/animations",
   },
   {
     title: "Advanced CSS Topics",
-    path: "/css/advanced-css",
+    path: "/lessons/html/advanced-css",
   },
   {
     title: "CSS Variables (Custom Properties)",
-    path: "/css/css-variables",
+    path: "/lessons/html/css-variables",
   },
   {
     title: "Units",
-    path: "/css/units",
+    path: "/lessons/html/units",
   },
   {
     title: "Z-index (CSS)",
-    path: "/css/z-index",
+    path: "/lessons/html/z-index",
   },
   {
     title: "Gradients",
-    path: "/css/gradients",
+    path: "/lessons/html/gradients",
   },
   {
     title: "Blend Modes and Filter Effects",
-    path: "/css/blend-modes-filters",
+    path: "/lessons/html/blend-modes-filters",
   },
   {
     title: "Dark Mode Implementation",
-    path: "/css/dark-mode",
+    path: "/lessons/html/dark-mode",
   },
   {
     title: "Workflow and Best Practices (CSS)",
-    path: "/css/workflow-best-practices",
+    path: "/lessons/html/workflow-best-practices",
   },
   {
     title: "Project-Based Learning",

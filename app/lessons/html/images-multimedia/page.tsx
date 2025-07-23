@@ -1,6 +1,8 @@
 import React from "react";
 import CodeReviewPager from "@/components/tutorials/tutorial-slider";
 import { baseUrl } from "@/utils/globals";
+import PageNavigationButtons from "@/components/navigations-button";
+import { HtmlChapterFootMap } from "@/utils/chapters-html";
 
 // Example for basic image embedding
 const section5_example1 = `<!DOCTYPE html>
@@ -86,6 +88,7 @@ const section5_example2 = `<!DOCTYPE html>
 </html>`;
 
 export default function HtmlImagesMultimediaPage() {
+  const page = 4;
   return (
     <>
       <div className="col-lg-8 col-md-12 col-sm-12 col-12">
@@ -407,6 +410,16 @@ export default function HtmlImagesMultimediaPage() {
                 `&lt;source&gt;` types for audio/video for best compatibility
                 and accessibility!
               </p>
+              <PageNavigationButtons
+                prev={{
+                  title: HtmlChapterFootMap[page - 1].title,
+                  path: HtmlChapterFootMap[page - 1].path,
+                }}
+                next={{
+                  title: HtmlChapterFootMap[page + 1].title,
+                  path: HtmlChapterFootMap[page + 1].path,
+                }}
+              />
             </section>
           </div>
         </div>

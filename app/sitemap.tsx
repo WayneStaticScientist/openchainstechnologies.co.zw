@@ -93,5 +93,65 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: "weekly",
     },
+    {
+      url: `${baseUrl}/lessons/html/lists`,
+      priority: 0.7,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+    },
+    {
+      url: `${baseUrl}/lessons/html/tables`,
+      priority: 0.7,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+    },
+    {
+      url: `${baseUrl}/lessons/html/forms`,
+      priority: 0.7,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+    },
+    {
+      url: `${baseUrl}/lessons/html/semantic-html5`,
+      priority: 0.7,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+    },
+    {
+      url: `${baseUrl}/lessons/html/metadata`,
+      priority: 0.7,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+    },
+    {
+      url: `${baseUrl}/lessons/html/comments`,
+      priority: 0.7,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+    },
+    {
+      url: `${baseUrl}/lessons/html/best-practices-accessibility`,
+      priority: 0.7,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+    },
+    {
+      url: `${baseUrl}/lessons/html/css-introduction`,
+      priority: 0.7,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+    },
+    {
+      url: `${baseUrl}/lessons/html/selectors-specificity`,
+      priority: 0.7,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+    },
+    {
+      url: `${baseUrl}/lessons/html/basic-selectors`,
+      priority: 0.7,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+    },
   ];
 }
