@@ -2,7 +2,23 @@ import React from "react";
 import CodeReviewPager from "@/components/tutorials/tutorial-slider";
 import PageNavigationButtons from "@/components/navigations-button";
 import { HtmlChapterFootMap } from "@/utils/chapters-html";
-
+import { baseUrl } from "@/utils/globals";
+export const metadata = {
+  title: "HTML Lists: Organizing Your Content Neatly! 📋",
+  description:
+    "Learn how to use HTML lists to structure your content effectively.",
+  keywords: "HTML, lists, web development, tutorials",
+  openGraph: {
+    title: "HTML Lists: Organizing Your Content Neatly! 📋",
+    description:
+      "Learn how to use HTML lists to structure your content effectively.",
+    url: `${baseUrl}/lessons/html/lists`,
+  },
+  alternatives: {
+    canonical: `${baseUrl}/lessons/html/lists`,
+  },
+  metadataBase: new URL(baseUrl),
+};
 const section4 = `<!DOCTYPE html>
 <html lang="en">
 <head>

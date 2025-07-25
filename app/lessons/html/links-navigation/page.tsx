@@ -3,7 +3,21 @@ import CodeReviewPager from "@/components/tutorials/tutorial-slider";
 import { baseUrl, Globals } from "@/utils/globals";
 import PageNavigationButtons from "@/components/navigations-button";
 import { HtmlChapterFootMap } from "@/utils/chapters-html";
-import page from "../page";
+export const metadata = {
+  title: "HTML Links & Navigation",
+  description: "Learn how to create and use HTML links for navigation.",
+  keywords: "HTML, links, navigation, web development, tutorials",
+  openGraph: {
+    title: "HTML Links & Navigation",
+    description: "Learn how to create and use HTML links for navigation.",
+    url: `${baseUrl}/lessons/html/links-navigation`,
+    type: "website",
+  },
+  alternatives: {
+    canonical: `${baseUrl}/lessons/html/links-navigation`,
+  },
+  metadataBase: new URL(baseUrl),
+};
 
 // First example for basic links
 const section4_example1 = `<!DOCTYPE html>

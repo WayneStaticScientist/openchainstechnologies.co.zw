@@ -2,7 +2,23 @@ import React from "react";
 import CodeReviewPager from "@/components/tutorials/tutorial-slider";
 import PageNavigationButtons from "@/components/navigations-button";
 import { HtmlChapterFootMap } from "@/utils/chapters-html";
-
+import { baseUrl } from "@/utils/globals";
+export const metadata = {
+  title: "HTML Forms: Collecting User Input on the Web",
+  description:
+    "Learn how to create HTML forms to collect user input, including text fields, checkboxes, radio buttons, and more.",
+  openGraph: {
+    title: "HTML Forms: Collecting User Input on the Web",
+    description:
+      "Learn how to create HTML forms to collect user input, including text fields, checkboxes, radio buttons, and more.",
+    url: `${baseUrl}/lessons/html/forms`,
+    siteName: "Openchains Technologies",
+  },
+  alternates: {
+    canonical: `${baseUrl}/lessons/html/forms`,
+  },
+  metadataBase: new URL(baseUrl),
+};
 const section6_1 = `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -524,7 +540,7 @@ export default function HtmlFormsPage() {
                   range.
                 </li>
               </ul>
-              <p className="tw:text-gray-700! tw:leading-relaxed! tw:font-semibold! tw:text-blue-500!">
+              <p className=" tw:leading-relaxed! tw:font-semibold! tw:text-blue-500!">
                 All `&lt;input&gt;` elements should have a `name` attribute.
                 This `name` is what the server uses to identify the data sent
                 from that input.

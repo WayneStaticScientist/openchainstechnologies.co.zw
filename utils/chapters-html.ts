@@ -172,23 +172,25 @@ export const HtmlChapterFootMap = [
     path: "/lessons/html/workflow-best-practices",
   },
   {
-    title: "Project-Based Learning",
-    path: "/projects",
-  },
-  {
     title: "Building a Portfolio Website",
-    path: "/projects/portfolio",
+    path: "/lessons/html/portfolio",
   },
   {
-    title: "Recreating Popular Website Layouts",
-    path: "/projects/website-layouts",
+    title: "Webdevelopment Examples",
+    path: "/lessons/html/examples-web",
   },
+];
+
+export const HTMLExamples: {
+  path: string;
+  title: string;
+  language: string;
+  description: string;
+}[] = [
   {
-    title: "Creating a Responsive Landing Page",
-    path: "/projects/landing-page",
-  },
-  {
-    title: "Interactive Elements using CSS",
-    path: "/projects/interactive-elements",
+    title: "Loading Spinner",
+    language: "html and javascript",
+    path: `/lessons/html/examples/loading-spinner`,
+    description: "A simple loading spinner using HTML and Javascript Canvas.",
   },
 ];

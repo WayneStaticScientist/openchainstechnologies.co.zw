@@ -2,7 +2,36 @@ import React from "react";
 import CodeReviewPager from "@/components/tutorials/tutorial-slider";
 import PageNavigationButtons from "@/components/navigations-button";
 import { HtmlChapterFootMap } from "@/utils/chapters-html";
-
+import { baseUrl } from "@/utils/globals";
+export const metadata = {
+  title: "HTML Accessibility Best Practices - OpenChains Technologies",
+  description:
+    "Learn HTML accessibility best practices to create inclusive web experiences. Understand semantic HTML, alt text, ARIA roles, and more.",
+  openGraph: {
+    type: "website",
+    url: `${baseUrl}/lessons/html/best-practices-accessibility`,
+    title: "HTML Accessibility Best Practices - OpenChains Technologies",
+    description:
+      "Learn HTML accessibility best practices to create inclusive web experiences. Understand semantic HTML, alt text, ARIA roles, and more.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "HTML Accessibility Best Practices - OpenChains Technologies",
+    description:
+      "Learn HTML accessibility best practices to create inclusive web experiences. Understand semantic HTML, alt text, ARIA roles, and more.",
+  },
+  keywords: [
+    "HTML accessibility",
+    "web accessibility",
+    "inclusive design",
+    "semantic HTML",
+    "ARIA roles",
+  ],
+  alternates: {
+    canonical: `${baseUrl}/lessons/html/best-practices-accessibility`,
+  },
+  metadataBase: new URL(baseUrl),
+};
 const section10_1 = `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -285,7 +314,7 @@ export default function HtmlAccessibilityPage() {
                   slow internet connection).
                 </li>
               </ul>
-              <p className="tw:text-gray-700! tw:leading-relaxed! tw:font-semibold! tw:text-blue-600!">
+              <p className=" tw:leading-relaxed! tw:font-semibold! tw:text-blue-600!">
                 An accessible website is simply a better website for everyone.
               </p>
             </section>

@@ -2,7 +2,38 @@ import React from "react";
 import CodeReviewPager from "@/components/tutorials/tutorial-slider";
 import PageNavigationButtons from "@/components/navigations-button";
 import { HtmlChapterFootMap } from "@/utils/chapters-html";
-
+import { baseUrl } from "@/utils/globals";
+export const metadata = {
+  title: "CSS Box Model - OpenChains Technologies",
+  description:
+    "Learn about the CSS Box Model, a fundamental concept in web design that defines how elements are structured and styled.",
+  openGraph: {
+    title: "CSS Box Model - OpenChains Technologies",
+    description:
+      "Learn about the CSS Box Model, a fundamental concept in web design that defines how elements are structured and styled.",
+    url: `${baseUrl}/lessons/html/css-introduction`,
+    siteName: "OpenChains Technologies",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "CSS Box Model - OpenChains Technologies",
+    description:
+      "Learn about the CSS Box Model, a fundamental concept in web design that defines how elements are structured and styled.",
+  },
+  keywords: [
+    "CSS Box Model",
+    "Web Design",
+    "HTML",
+    "CSS",
+    "Web Development",
+    "OpenChains Technologies",
+  ],
+  alternates: {
+    canonical: `${baseUrl}/lessons/html/css-introduction`,
+  },
+  metadataBase: new URL(baseUrl),
+};
 // Code example 1: Inline CSS
 const section1 = `<!DOCTYPE html>
 <html lang="en">

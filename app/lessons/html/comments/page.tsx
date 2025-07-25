@@ -2,7 +2,35 @@ import React from "react";
 import CodeReviewPager from "@/components/tutorials/tutorial-slider";
 import PageNavigationButtons from "@/components/navigations-button";
 import { HtmlChapterFootMap } from "@/utils/chapters-html";
-
+import { baseUrl } from "@/utils/globals";
+export const metadata = {
+  title: "HTML Comments - OpenChains Technologies",
+  description:
+    "Learn how to use HTML comments effectively in your web development projects. Understand their purpose, syntax, and best practices.",
+  openGraph: {
+    type: "website",
+    url: `${baseUrl}/lessons/html/comments`,
+    title: "HTML Comments - OpenChains Technologies",
+    description:
+      "Learn how to use HTML comments effectively in your web development projects. Understand their purpose, syntax, and best practices.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "HTML Comments - OpenChains Technologies",
+    description:
+      "Learn how to use HTML comments effectively in your web development projects. Understand their purpose, syntax, and best practices.",
+  },
+  keywords: [
+    "HTML comments",
+    "web development",
+    "OpenChains Technologies",
+    "coding best practices",
+  ],
+  alternates: {
+    canonical: `${baseUrl}/lessons/html/comments`,
+  },
+  metadataBase: new URL(baseUrl),
+};
 const section9_1 = `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -220,7 +248,7 @@ export default function HtmlCommentsPage() {
                   to provide more detailed explanations or notes. --&gt;
                 </code>
               </pre>
-              <p className="tw:text-gray-700! tw:leading-relaxed! tw:font-semibold! tw:text-blue-600!">
+              <p className="tw:leading-relaxed! tw:font-semibold! tw:text-blue-600!">
                 Even though they're in your HTML file, comments are only visible
                 when someone views the page's source code (e.g., by
                 right-clicking and selecting "View Page Source" in a browser).
@@ -324,7 +352,7 @@ export default function HtmlCommentsPage() {
                   on the live site.
                 </li>
               </ul>
-              <p className="tw:text-gray-700! tw:leading-relaxed! tw:font-semibold! tw:text-orange-600!">
+              <p className=" tw:leading-relaxed! tw:font-semibold! tw:text-orange-600!">
                 To comment out a block of code, simply wrap it with `&lt;!--`
                 and `--&gt;`. To uncomment it, remove these markers.
               </p>

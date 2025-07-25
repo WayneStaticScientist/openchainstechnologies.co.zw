@@ -2,7 +2,26 @@ import React from "react";
 import CodeReviewPager from "@/components/tutorials/tutorial-slider";
 import PageNavigationButtons from "@/components/navigations-button";
 import { HtmlChapterFootMap } from "@/utils/chapters-html";
+import { baseUrl } from "@/utils/globals";
+export const metadata = {
+  title: "HTML Metadata: The Unseen Power Behind Your Web Page! 🕵️‍♀️",
+  description:
+    "Learn how HTML metadata enhances SEO, social media sharing, and browser behavior. Master essential tags like <meta>, <title>, and Open Graph for better web performance.",
 
+  keywords: "HTML, metadata, SEO, social media, Open Graph, web development",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: `${baseUrl}/lessons/html/metadata/page`,
+    title: "HTML Metadata: The Unseen Power Behind Your Web Page! 🕵️‍♀️",
+    description:
+      "Discover the hidden potential of HTML metadata and how it can elevate your web presence.",
+  },
+  alternates: {
+    canonical: `${baseUrl}/lessons/html/metadata/page`,
+  },
+  metadataBase: new URL(baseUrl),
+};
 const section8_1 = `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -201,7 +220,7 @@ export default function HtmlMetadataPage() {
                 your HTML file, providing instructions and context to browsers,
                 search engines, social media platforms, and other web services.
               </p>
-              <p className="tw:text-gray-700! tw:leading-relaxed! tw:font-semibold! tw:text-blue-600!">
+              <p className="tw:leading-relaxed! tw:font-semibold! tw:text-blue-600!">
                 Think of the `&lt;head&gt;` section as the "brain" of your HTML
                 document, containing all the vital information about the page,
                 while the `&lt;body&gt;` is the "body" containing the visible

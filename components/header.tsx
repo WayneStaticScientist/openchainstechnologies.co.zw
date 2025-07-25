@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import { FaBars } from "react-icons/fa";
 import { SiLivechat } from "react-icons/si";
 
 export default function Header() {
@@ -22,9 +23,7 @@ export default function Header() {
               aria-expanded="false"
               aria-label="Toggle navigation"
             >
-              <span className="navbar-toggler-icon" />
-              <span className="navbar-toggler-icon" />
-              <span className="navbar-toggler-icon" />
+              <FaBars />
             </button>
             <div
               className="collapse navbar-collapse"
@@ -133,6 +132,9 @@ export default function Header() {
                     className="dropdown-menu"
                     aria-labelledby="navbarDropdown4"
                   >
+                    <a className="dropdown-item" href="/editor/html">
+                      Live Html Editor
+                    </a>
                     <a className="dropdown-item" href="/founder">
                       Founder
                     </a>
@@ -160,7 +162,6 @@ export default function Header() {
                     href="/chat"
                     className="live-chat tw:flex tw:items-center tw:justify-center tw:gap-2"
                   >
-                    {" "}
                     <SiLivechat />
                     Live Chat
                   </a>

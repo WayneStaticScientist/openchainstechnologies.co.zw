@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@codeium/react-code-editor": "^1.0.12",
     "@emailjs/browser": "^4.4.1",
     "@emailjs/react-native": "^4.2.2",
     "bcryptjs": "^3.0.2",

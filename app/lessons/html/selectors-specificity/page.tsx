@@ -1,8 +1,24 @@
 import React from "react";
 import CodeReviewPager from "@/components/tutorials/tutorial-slider";
 import PageNavigationButtons from "@/components/navigations-button";
-import { Html } from "next/document";
 import { HtmlChapterFootMap } from "@/utils/chapters-html";
+import { baseUrl } from "@/utils/globals";
+export const metadata = {
+  title: "CSS Selectors and Specificity",
+  description:
+    "Explore the different types of CSS selectors and the concept of specificity to master styling in web development.",
+  keywords: ["CSS", "selectors", "specificity", "web design"],
+  openGraph: {
+    title: "CSS Selectors and Specificity",
+    description:
+      "Explore the different types of CSS selectors and the concept of specificity to master styling in web development.",
+    url: `${baseUrl}/lessons/html/selectors-specificity`,
+  },
+  alternates: {
+    canonical: `${baseUrl}/lessons/html/selectors-specificity`,
+  },
+  metadataBase: new URL(baseUrl),
+};
 
 // Code example 1: Element, Class, ID Selectors
 const section1 = `<!DOCTYPE html>

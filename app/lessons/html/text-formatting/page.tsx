@@ -2,8 +2,25 @@ import React from "react";
 import CodeReviewPager from "@/components/tutorials/tutorial-slider";
 import PageNavigationButtons from "@/components/navigations-button";
 import { HtmlChapterFootMap } from "@/utils/chapters-html";
-import page from "../page";
-
+import { baseUrl } from "@/utils/globals";
+const title = "HTML Text Formatting: Making Your Content Stand Out! ✨";
+const description =
+  "Explore the art of styling texts and fonts in HTML to enhance your web content.";
+const canonicalUrl = `${baseUrl}/lessons/html/text-fonts`;
+export const metadata = {
+  title,
+  description,
+  keywords: ["HTML", "CSS", "text styling", "fonts", "web design"],
+  openGraph: {
+    title,
+    description,
+    url: canonicalUrl,
+  },
+  alternates: {
+    canonical: canonicalUrl,
+  },
+  metadataBase: new URL(baseUrl),
+};
 const section3 = `<!DOCTYPE html>
 <html lang="en">
 <head>

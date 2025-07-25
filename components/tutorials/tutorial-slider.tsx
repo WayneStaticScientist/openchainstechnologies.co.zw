@@ -1,9 +1,12 @@
 "use client";
+import { codeReviewPagerCode } from "@/utils/constants";
+import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { a11yDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 export default function CodeReviewPager({ code }: { code: string }) {
+  const router = useRouter();
   const [highlighterHeight, setHighlighterHeight] = useState(0);
   const [highlighterWidth, setHighlighterWidth] = useState(0);
   const highlighterRef = React.useRef<HTMLDivElement>(null);
@@ -45,6 +48,7 @@ export default function CodeReviewPager({ code }: { code: string }) {
       {activeTab === "code" ? (
         <div
           ref={highlighterRef}
+          className="tw:relative!"
           style={{
             height: `${highlighterHeight}px`,
             overflow: "hidden",
@@ -62,12 +66,28 @@ export default function CodeReviewPager({ code }: { code: string }) {
           >
             {code}
           </SyntaxHighlighter>
+          <button
+            onClick={() => {
+              localStorage.setItem(codeReviewPagerCode, code);
+              router.push("/editor/html?preload=true");
+            }}
+            className="tw:absolute! tw:top-0! tw:right-0! tw:bg-indigo-600! tw:text-white! tw:py-2! tw:px-4! tw:rounded-bl-lg!
+            tw:hover:bg-indigo-400! tw:focus:outline-none! tw:focus:ring-2! tw:focus:ring-indigo-500! tw:focus:ring-opacity-50!
+          tw:cursor-pointer! tw:transition-colors! tw:duration-200! hover:tw:bg-indigo-700! focus:tw:outline-none! focus:tw:ring-2! focus:tw:ring-indigo-500! focus:tw:ring-opacity-50!
+           tw:shadow-md! hover:tw:bg-indigo-700! focus:tw:outline-none! focus:tw:ring-2! focus:tw:ring-indigo-500! focus:tw:ring-opacity-50!"
+          >
+            view in editor
+          </button>
         </div>
       ) : (
         <iframe
           srcDoc={code}
           height={highlighterHeight}
           width={highlighterWidth}
+          style={{
+            maxHeight: "1200px",
+            width: "100%",
+          }}
         />
       )}
     </div>

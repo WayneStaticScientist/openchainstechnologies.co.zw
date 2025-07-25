@@ -2,6 +2,41 @@ import React from "react";
 import CodeReviewPager from "@/components/tutorials/tutorial-slider";
 import PageNavigationButtons from "@/components/navigations-button";
 import { HtmlChapterFootMap } from "@/utils/chapters-html";
+import { baseUrl } from "@/utils/globals";
+export const metadata = {
+  title: "HTML Elements and Attributes",
+  description:
+    "Learn about HTML elements and attributes, the building blocks of web content. Understand how to structure your HTML with elements and enhance them with attributes.",
+  keywords: [
+    "HTML elements",
+    "HTML attributes",
+    "web development",
+    "HTML structure",
+    "HTML tutorial",
+    "web content",
+    "HTML tags",
+    "HTML coding",
+    "HTML basics",
+    "learn HTML",
+  ],
+  alternates: {
+    canonical: `${baseUrl}/lessons/html/elements-attributes`,
+  },
+  openGraph: {
+    title: "HTML Elements and Attributes",
+    description:
+      "Learn about HTML elements and attributes, the building blocks of web content. Understand how to structure your HTML with elements and enhance them with attributes.",
+    url: `${baseUrl}/lessons/html/elements-attributes`,
+  },
+  twitter: {
+    title: "HTML Elements and Attributes",
+    description:
+      "Learn about HTML elements and attributes, the building blocks of web content. Understand how to structure your HTML with elements and enhance them with attributes.",
+    card: "summary_large_image",
+    site: "@openchainstech",
+  },
+  metadataBase: new URL(baseUrl),
+};
 
 const section2 = `<!DOCTYPE html>
 <html lang="en">

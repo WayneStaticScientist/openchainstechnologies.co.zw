@@ -3,7 +3,22 @@ import CodeReviewPager from "@/components/tutorials/tutorial-slider";
 import { baseUrl } from "@/utils/globals";
 import PageNavigationButtons from "@/components/navigations-button";
 import { HtmlChapterFootMap } from "@/utils/chapters-html";
-
+export const metadata = {
+  title: "HTML Images & Multimedia",
+  description:
+    "Learn how to embed images, audio, and video in HTML to enhance your web pages.",
+  openGraph: {
+    title: "HTML Images & Multimedia",
+    description:
+      "Learn how to embed images, audio, and video in HTML to enhance your web pages.",
+    url: `${baseUrl}/lessons/html/images-multimedia`,
+    siteName: "Openchains Technologies",
+  },
+  alternates: {
+    canonical: `${baseUrl}/lessons/html/images-multimedia`,
+  },
+  metadataBase: new URL(baseUrl),
+};
 // Example for basic image embedding
 const section5_example1 = `<!DOCTYPE html>
 <html lang="en">

@@ -1,6 +1,41 @@
 import CodeReviewPager from "@/components/tutorials/tutorial-slider";
+import { baseUrl } from "@/utils/globals";
 import React from "react";
-
+export const metadata = {
+  title: "Loading Spinner",
+  description:
+    "Learn how to create a captivating loading spinner using HTML, CSS, and the Canvas API. This tutorial covers the basics of loaders, why they are important, and how to implement a dynamic, colorful spinner.",
+  keywords: [
+    "HTML",
+    "CSS",
+    "Canvas API",
+    "Loading Spinner",
+    "Web Development",
+    "User Experience",
+    "Animation",
+    "JavaScript",
+    "Web Design",
+  ],
+  openGraph: {
+    title: "Build Loading Spinner - Openchains Technologies",
+    description:
+      "Learn how to create a captivating loading spinner using HTML, CSS, and the Canvas API. This tutorial covers the basics of loaders, why they are important, and how to implement a dynamic, colorful spinner.",
+    url: `${baseUrl}/lessons/html/examples/loading-spinner`,
+    siteName: "Openchains Technologies",
+    images: [
+      {
+        url: `${baseUrl}/assets/img/examples/animated-loader.gif`,
+        width: 1200,
+        height: 630,
+        alt: "Loading Spinner Example",
+      },
+    ],
+  },
+  alternates: {
+    canonical: `${baseUrl}/lessons/html/examples/loading-spinner`,
+  },
+  metadataBase: new URL(baseUrl),
+};
 export default function LoadingSpinner() {
   return (
     <>

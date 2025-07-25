@@ -1,8 +1,35 @@
 import React from "react";
 import CodeReviewPager from "@/components/tutorials/tutorial-slider";
 import PageNavigationButtons from "@/components/navigations-button";
-import { Html } from "next/document";
 import { HtmlChapterFootMap } from "@/utils/chapters-html";
+import { baseUrl } from "@/utils/globals";
+export const metadata = {
+  title: "HTML Introduction",
+  description:
+    "Learn the basics of HTML, the foundational language for web development.",
+  openGraph: {
+    title: "HTML Introduction",
+    description:
+      "Learn the basics of HTML, the foundational language for web development.",
+    url: "/lessons/html/introduction",
+    siteName: "Openchains Technologies",
+  },
+  alternates: {
+    canonical: "/lessons/html/introduction",
+  },
+  keywords: [
+    "HTML",
+    "web development",
+    "introduction to HTML",
+    "learn HTML",
+    "HTML basics",
+    "HTML tutorial",
+    "web design",
+    "front-end development",
+    "Openchains Technologies",
+  ],
+  metadataBase: new URL(baseUrl),
+};
 const section1 = `<!DOCTYPE html>
 <html lang="en">
 <head>

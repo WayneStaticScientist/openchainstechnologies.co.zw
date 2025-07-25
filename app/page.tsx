@@ -16,6 +16,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: baseUrl, // Self-referencing canonical
   },
+  metadataBase: new URL(baseUrl),
 };
 export default function App() {
   return (

@@ -2,7 +2,23 @@ import React from "react";
 import CodeReviewPager from "@/components/tutorials/tutorial-slider";
 import PageNavigationButtons from "@/components/navigations-button";
 import { HtmlChapterFootMap } from "@/utils/chapters-html";
-
+import { baseUrl } from "@/utils/globals";
+export const metadata = {
+  title: "Semantic HTML5: Building Meaningful Web Pages!",
+  description:
+    "Learn how to use semantic HTML5 elements to create more meaningful and accessible web pages.",
+  keywords: ["HTML5", "semantic", "web development", "accessibility"],
+  openGraph: {
+    title: "Semantic HTML5: Building Meaningful Web Pages!",
+    description:
+      "Learn how to use semantic HTML5 elements to create more meaningful and accessible web pages.",
+    url: `${baseUrl}/lessons/html/semantic-html5`,
+  },
+  alternates: {
+    canonical: `${baseUrl}/lessons/html/semantic-html5`,
+  },
+  metadataBase: new URL(baseUrl),
+};
 const section7_1 = `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -195,8 +211,8 @@ export default function HtmlSemanticPage() {
             <p className="tw:text-lg! tw:text-gray-600! tw:text-center! tw:mb-8! tw:max-w-3xl! tw:mx-auto! tw:px-4!">
               Semantic HTML5 is about using HTML elements according to their
               meaning, rather than just their appearance. It's about giving
-              context and structure to your content, making it more understandable
-              for both browsers and developers.
+              context and structure to your content, making it more
+              understandable for both browsers and developers.
             </p>
 
             <hr className="my-6 tw:border-gray-300!" />
@@ -207,18 +223,20 @@ export default function HtmlSemanticPage() {
                 What is Semantic HTML? 🤔
               </h2>
               <p className="tw:text-gray-700! tw:leading-relaxed! tw:mb-4!">
-                In the early days of the web, developers often used generic `&lt;div&gt;`
-                elements with IDs or classes (e.g., `&lt;div id="header"&gt;`, `&lt;div class="sidebar"&gt;`)
-                to structure their pages. While this worked visually, it lacked inherent
+                In the early days of the web, developers often used generic
+                `&lt;div&gt;` elements with IDs or classes (e.g., `&lt;div
+                id="header"&gt;`, `&lt;div class="sidebar"&gt;`) to structure
+                their pages. While this worked visually, it lacked inherent
                 meaning for machines.
               </p>
               <p className="tw:text-gray-700! tw:leading-relaxed! tw:mb-4!">
-                **Semantic HTML5** introduces new elements that clearly define the
-                structure and purpose of different parts of a web page. Instead of just
-                being a container, elements like `&lt;header&gt;`, `&lt;nav&gt;`, `&lt;main&gt;`,
-                `&lt;article&gt;`, `&lt;section&gt;`, `&lt;aside&gt;`, and `&lt;footer&gt;` tell
-                the browser, search engines, and assistive technologies what type of
-                content they contain.
+                **Semantic HTML5** introduces new elements that clearly define
+                the structure and purpose of different parts of a web page.
+                Instead of just being a container, elements like
+                `&lt;header&gt;`, `&lt;nav&gt;`, `&lt;main&gt;`,
+                `&lt;article&gt;`, `&lt;section&gt;`, `&lt;aside&gt;`, and
+                `&lt;footer&gt;` tell the browser, search engines, and assistive
+                technologies what type of content they contain.
               </p>
               <h3 className="tw:text-xl! tw:font-semibold! tw:text-gray-700! tw:mb-3!">
                 The Problem with "Div Soup" vs. Semantic Solution:
@@ -229,23 +247,22 @@ export default function HtmlSemanticPage() {
               </p>
               <pre className="tw:bg-gray-100! tw:p-3! tw:rounded! tw:text-sm! tw:overflow-x-auto! tw:mb-4!">
                 <code className="language-html">
-&lt;div id="header"&gt;...&lt;/div&gt;
-&lt;div class="navigation"&gt;...&lt;/div&gt;
-&lt;div class="main-content"&gt;...&lt;/div&gt;
-&lt;div id="sidebar"&gt;...&lt;/div&gt;
-&lt;div class="footer"&gt;...&lt;/div&gt;
+                  &lt;div id="header"&gt;...&lt;/div&gt; &lt;div
+                  class="navigation"&gt;...&lt;/div&gt; &lt;div
+                  class="main-content"&gt;...&lt;/div&gt; &lt;div
+                  id="sidebar"&gt;...&lt;/div&gt; &lt;div
+                  class="footer"&gt;...&lt;/div&gt;
                 </code>
               </pre>
               <p className="tw:text-gray-700! tw:leading-relaxed! tw:mb-4!">
-                With Semantic HTML5, the same structure becomes much more meaningful:
+                With Semantic HTML5, the same structure becomes much more
+                meaningful:
               </p>
               <pre className="tw:bg-gray-100! tw:p-3! tw:rounded! tw:text-sm! tw:overflow-x-auto! tw:mb-4!">
                 <code className="language-html">
-&lt;header&gt;...&lt;/header&gt;
-&lt;nav&gt;...&lt;/nav&gt;
-&lt;main&gt;...&lt;/main&gt;
-&lt;aside&gt;...&lt;/aside&gt;
-&lt;footer&gt;...&lt;/footer&gt;
+                  &lt;header&gt;...&lt;/header&gt; &lt;nav&gt;...&lt;/nav&gt;
+                  &lt;main&gt;...&lt;/main&gt; &lt;aside&gt;...&lt;/aside&gt;
+                  &lt;footer&gt;...&lt;/footer&gt;
                 </code>
               </pre>
             </section>
@@ -262,19 +279,19 @@ export default function HtmlSemanticPage() {
                   <strong className="tw:font-semibold! tw:text-indigo-600!">
                     Improved Accessibility:
                   </strong>{" "}
-                  Screen readers and other assistive technologies rely on semantic
-                  markup to understand the structure and hierarchy of a page. This
-                  allows users with disabilities to navigate and consume content
-                  more effectively.
+                  Screen readers and other assistive technologies rely on
+                  semantic markup to understand the structure and hierarchy of a
+                  page. This allows users with disabilities to navigate and
+                  consume content more effectively.
                 </li>
                 <li className="tw:leading-relaxed!">
                   <strong className="tw:font-semibold! tw:text-indigo-600!">
                     Better SEO (Search Engine Optimization):
                   </strong>{" "}
-                  Search engines (like Google) use semantic elements to understand
-                  the content and context of your web page. This helps them
-                  index your site more accurately and potentially rank higher
-                  in search results.
+                  Search engines (like Google) use semantic elements to
+                  understand the content and context of your web page. This
+                  helps them index your site more accurately and potentially
+                  rank higher in search results.
                 </li>
                 <li className="tw:leading-relaxed!">
                   <strong className="tw:font-semibold! tw:text-indigo-600!">
@@ -289,8 +306,8 @@ export default function HtmlSemanticPage() {
                   <strong className="tw:font-semibold! tw:text-indigo-600!">
                     Future-Proofing:
                   </strong>{" "}
-                  As web standards evolve, semantic elements provide a more stable
-                  and predictable foundation for your web pages.
+                  As web standards evolve, semantic elements provide a more
+                  stable and predictable foundation for your web pages.
                 </li>
               </ul>
             </section>
@@ -310,9 +327,9 @@ export default function HtmlSemanticPage() {
                   <strong className="tw:font-semibold! tw:text-purple-600!">
                     `&lt;header&gt;`:
                   </strong>
-                  Represents introductory content, typically containing headings,
-                  logos, search forms, and navigation for a section or the entire
-                  document.
+                  Represents introductory content, typically containing
+                  headings, logos, search forms, and navigation for a section or
+                  the entire document.
                 </li>
                 <li className="tw:leading-relaxed!">
                   <strong className="tw:font-semibold! tw:text-purple-600!">
@@ -325,58 +342,60 @@ export default function HtmlSemanticPage() {
                   <strong className="tw:font-semibold! tw:text-purple-600!">
                     `&lt;main&gt;`:
                   </strong>
-                  Represents the dominant content of the `&lt;body&gt;`. There should
-                  only be one `&lt;main&gt;` element per document, and it should contain
-                  content unique to that document, excluding repeated elements like
-                  headers, footers, and sidebars.
+                  Represents the dominant content of the `&lt;body&gt;`. There
+                  should only be one `&lt;main&gt;` element per document, and it
+                  should contain content unique to that document, excluding
+                  repeated elements like headers, footers, and sidebars.
                 </li>
                 <li className="tw:leading-relaxed!">
                   <strong className="tw:font-semibold! tw:text-purple-600!">
                     `&lt;article&gt;`:
                   </strong>
                   Represents a self-contained composition that is independently
-                  distributable or reusable. Think of a blog post, a news article,
-                  a forum post, or a user comment.
+                  distributable or reusable. Think of a blog post, a news
+                  article, a forum post, or a user comment.
                 </li>
                 <li className="tw:leading-relaxed!">
                   <strong className="tw:font-semibold! tw:text-purple-600!">
                     `&lt;section&gt;`:
                   </strong>
-                  Represents a standalone section of a document, which doesn't have
-                  a more specific semantic element to represent it. It should
-                  typically have a heading. Examples include chapters, tabbed
-                  content, or any logical grouping of content within an `&lt;article&gt;`
-                  or `&lt;main&gt;`.
+                  Represents a standalone section of a document, which doesn't
+                  have a more specific semantic element to represent it. It
+                  should typically have a heading. Examples include chapters,
+                  tabbed content, or any logical grouping of content within an
+                  `&lt;article&gt;` or `&lt;main&gt;`.
                 </li>
                 <li className="tw:leading-relaxed!">
                   <strong className="tw:font-semibold! tw:text-purple-600!">
                     `&lt;aside&gt;`:
                   </strong>
-                  Represents a portion of a document whose content is only indirectly
-                  related to the document's main content. Often used for sidebars,
-                  pull quotes, or advertisements.
+                  Represents a portion of a document whose content is only
+                  indirectly related to the document's main content. Often used
+                  for sidebars, pull quotes, or advertisements.
                 </li>
                 <li className="tw:leading-relaxed!">
                   <strong className="tw:font-semibold! tw:text-purple-600!">
                     `&lt;footer&gt;`:
                   </strong>
-                  Represents a footer for its nearest sectioning content or sectioning
-                  root element. Typically contains copyright information, author info,
-                  contact details, or related links.
+                  Represents a footer for its nearest sectioning content or
+                  sectioning root element. Typically contains copyright
+                  information, author info, contact details, or related links.
                 </li>
                 <li className="tw:leading-relaxed!">
                   <strong className="tw:font-semibold! tw:text-purple-600!">
                     `&lt;figure&gt;` and `&lt;figcaption&gt;`:
                   </strong>
-                  `&lt;figure&gt;` is for self-contained content (like images, code
-                  listings, charts) that is referenced from the main content.
-                  `&lt;figcaption&gt;` provides a caption for the `&lt;figure&gt;`.
+                  `&lt;figure&gt;` is for self-contained content (like images,
+                  code listings, charts) that is referenced from the main
+                  content. `&lt;figcaption&gt;` provides a caption for the
+                  `&lt;figure&gt;`.
                 </li>
                 <li className="tw:leading-relaxed!">
                   <strong className="tw:font-semibold! tw:text-purple-600!">
                     `&lt;mark&gt;`:
                   </strong>
-                  Used to highlight text that is relevant in the current context.
+                  Used to highlight text that is relevant in the current
+                  context.
                 </li>
                 <li className="tw:leading-relaxed!">
                   <strong className="tw:font-semibold! tw:text-purple-600!">
@@ -394,8 +413,9 @@ export default function HtmlSemanticPage() {
                 Code in Action 1: Basic Header and Navigation 🏗️
               </h3>
               <p className="tw:text-gray-700! tw:leading-relaxed! tw:mb-4!">
-                Let's see how `&lt;header&gt;` and `&lt;nav&gt;` are used to structure
-                the top part of a typical webpage, providing clear semantic meaning.
+                Let's see how `&lt;header&gt;` and `&lt;nav&gt;` are used to
+                structure the top part of a typical webpage, providing clear
+                semantic meaning.
               </p>
               <CodeReviewPager code={section7_1} />
             </section>
@@ -408,10 +428,11 @@ export default function HtmlSemanticPage() {
                 Code in Action 2: Article, Aside, Figure, and Mark 📰
               </h3>
               <p className="tw:text-gray-700! tw:leading-relaxed! tw:mb-4!">
-                This example demonstrates how an `&lt;article&gt;` can contain the
-                main content (like a blog post), an `&lt;aside&gt;` can hold related
-                information, and `&lt;figure&gt;/&lt;figcaption&gt;` are used for
-                images with captions, while `&lt;mark&gt;` highlights text.
+                This example demonstrates how an `&lt;article&gt;` can contain
+                the main content (like a blog post), an `&lt;aside&gt;` can hold
+                related information, and `&lt;figure&gt;/&lt;figcaption&gt;` are
+                used for images with captions, while `&lt;mark&gt;` highlights
+                text.
               </p>
               <CodeReviewPager code={section7_2} />
             </section>
@@ -424,17 +445,20 @@ export default function HtmlSemanticPage() {
                 Code in Action 3: Full Semantic Page Layout 🎨
               </h3>
               <p className="tw:text-gray-700! tw:leading-relaxed! tw:mb-4!">
-                Here's a comprehensive example showing how multiple semantic elements
-                work together to create a well-structured and meaningful web page layout.
-                Notice the `&lt;main&gt;`, `&lt;section&gt;`, `&lt;article&gt;`, and
-                `&lt;footer&gt;` elements.
+                Here's a comprehensive example showing how multiple semantic
+                elements work together to create a well-structured and
+                meaningful web page layout. Notice the `&lt;main&gt;`,
+                `&lt;section&gt;`, `&lt;article&gt;`, and `&lt;footer&gt;`
+                elements.
               </p>
               <CodeReviewPager code={section7_3} />
               <p className="tw:text-gray-700! tw:leading-relaxed! tw:mt-6! tw:font-semibold!">
-                Embracing Semantic HTML5 is a best practice for modern web development.
-                It leads to more robust, accessible, and SEO-friendly websites.
-                By using these elements correctly, you're not just writing HTML; you're
-                telling a more coherent story about your content to both machines and humans. Keep up the great work! 💪
+                Embracing Semantic HTML5 is a best practice for modern web
+                development. It leads to more robust, accessible, and
+                SEO-friendly websites. By using these elements correctly, you're
+                not just writing HTML; you're telling a more coherent story
+                about your content to both machines and humans. Keep up the
+                great work! 💪
               </p>
               <PageNavigationButtons
                 prev={{

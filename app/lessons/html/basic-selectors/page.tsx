@@ -3,7 +3,38 @@ import CodeReviewPager from "@/components/tutorials/tutorial-slider";
 import PageNavigationButtons from "@/components/navigations-button";
 import { Html } from "next/document";
 import { HtmlChapterFootMap } from "@/utils/chapters-html";
-
+import { baseUrl } from "@/utils/globals";
+export const metadata = {
+  title: "Basic CSS Selectors - OpenChains Technologies",
+  description:
+    "Learn the fundamental CSS selectors: Element, Class, and ID selectors. Understand how to target HTML elements effectively.",
+  openGraph: {
+    type: "website",
+    url: `${baseUrl}/lessons/html/basic-selectors"`,
+    title: "Basic CSS Selectors - OpenChains Technologies",
+    description:
+      "Learn the fundamental CSS selectors: Element, Class, and ID selectors. Understand how to target HTML elements effectively.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Basic CSS Selectors - OpenChains Technologies",
+    description:
+      "Learn the fundamental CSS selectors: Element, Class, and ID selectors. Understand how to target HTML elements effectively.",
+  },
+  keywords: [
+    "CSS selectors",
+    "basic CSS selectors",
+    "element selector",
+    "class selector",
+    "ID selector",
+    "web development",
+    "OpenChains Technologies",
+  ],
+  alternates: {
+    canonical: `${baseUrl}/lessons/html/basic-selectors`,
+  },
+  metadataBase: new URL(baseUrl),
+};
 // Code example 1: Element Selector
 const section1 = `<!DOCTYPE html>
 <html lang="en">

@@ -19,3 +19,6 @@ export const HeroDisplay: {
     sr2: "/assets/images/banner-img2.png",
   },
 ];
+export const codeReviewPagerCode = "codeReviewPagerCode";
+export const defaultCode =
+  "<!DOCTYPE html>\n<html>\n<head>\n  <title>My Page</title>\n</head>\n<body>\n  <h1>Hello, World!</h1>\n</body>\n</html>";

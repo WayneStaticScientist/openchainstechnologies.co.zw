@@ -75,6 +75,12 @@ export default function Footer() {
                 <ul className="list-unstyled p-0 m-0">
                   <li>
                     <i className="fa-solid fa-circle" />
+                    <a href="/editor/html" className="d-inline-block">
+                      Html Live Editor
+                    </a>
+                  </li>
+                  <li>
+                    <i className="fa-solid fa-circle" />
                     <a href="/apis/libraries" className="d-inline-block">
                       Apis
                     </a>

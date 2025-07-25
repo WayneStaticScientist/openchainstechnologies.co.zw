@@ -1,9 +1,9 @@
 "use client";
-import { HtmlChapterFootMap } from "@/utils/chapters-html";
-import { Globals } from "@/utils/globals";
 import React from "react";
-import { BiLogoFacebook, BiLogoWhatsapp, BiLogoYoutube } from "react-icons/bi";
+import { Globals } from "@/utils/globals";
 import { IoLogoInstagram } from "react-icons/io";
+import { HtmlChapterFootMap } from "@/utils/chapters-html";
+import { BiLogoFacebook, BiLogoWhatsapp, BiLogoYoutube } from "react-icons/bi";
 
 export default function layout({
   children,

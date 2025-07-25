@@ -2,6 +2,21 @@ import React from "react";
 import CodeReviewPager from "@/components/tutorials/tutorial-slider";
 import PageNavigationButtons from "@/components/navigations-button";
 import { HtmlChapterFootMap } from "@/utils/chapters-html";
+import { baseUrl } from "@/utils/globals";
+export const metadata = {
+  title: "HTML Tables",
+  description: "Learn how to create and style tables in HTML.",
+  keywords: ["HTML", "tables", "web design"],
+  openGraph: {
+    title: "HTML Tables",
+    description: "Learn how to create and style tables in HTML.",
+    url: `${baseUrl}/lessons/html/tables`,
+  },
+  alternates: {
+    canonical: `${baseUrl}/lessons/html/tables`,
+  },
+  metadataBase: new URL(baseUrl),
+};
 
 const section5_1 = `<!DOCTYPE html>
 <html lang="en">
@@ -272,7 +287,7 @@ export default function HtmlTablesPage() {
                   data cells and headers.
                 </li>
               </ul>
-              <p className="tw:text-gray-700! tw:leading-relaxed! tw:font-semibold! tw:text-red-500!">
+              <p className="tw:leading-relaxed! tw:font-semibold! tw:text-red-500!">
                 Important Note:
               </p>
               <p className="tw:text-gray-700! tw:leading-relaxed!">
