@@ -132,7 +132,12 @@ export default function Header() {
                     className="dropdown-menu"
                     aria-labelledby="navbarDropdown4"
                   >
-                    <a className="dropdown-item" href="/editor/html">
+                    <a
+                      className="dropdown-item"
+                      href={`/editor/html?refer=${encodeURIComponent(
+                        window.location.pathname
+                      )}`}
+                    >
                       Live Html Editor
                     </a>
                     <a className="dropdown-item" href="/founder">

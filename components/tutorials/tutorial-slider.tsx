@@ -69,7 +69,11 @@ export default function CodeReviewPager({ code }: { code: string }) {
           <button
             onClick={() => {
               localStorage.setItem(codeReviewPagerCode, code);
-              router.push("/editor/html?preload=true");
+              router.push(
+                `/editor/html?preload=true&refer=${encodeURIComponent(
+                  window.location.pathname
+                )}`
+              );
             }}
             className="tw:absolute! tw:top-0! tw:right-0! tw:bg-indigo-600! tw:text-white! tw:py-2! tw:px-4! tw:rounded-bl-lg!
             tw:hover:bg-indigo-400! tw:focus:outline-none! tw:focus:ring-2! tw:focus:ring-indigo-500! tw:focus:ring-opacity-50!

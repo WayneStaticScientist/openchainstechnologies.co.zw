@@ -1,14 +1,14 @@
 "use client";
-import { codeReviewPagerCode, defaultCode } from "@/utils/constants";
 import { useSearchParams } from "next/navigation";
-import Head from "next/head";
-import React, { useEffect, useRef, useState } from "react";
-import { CodeiumEditor, Document, Language } from "@codeium/react-code-editor";
 import { IoArrowBackOutline } from "react-icons/io5";
+import React, { useEffect, useRef, useState } from "react";
+import { codeReviewPagerCode, defaultCode } from "@/utils/constants";
+import { CodeiumEditor, Document, Language } from "@codeium/react-code-editor";
 
 export default function HtmlEditor() {
-  const [code, setCode] = useState("");
   const searchParams = useSearchParams();
+  const refer = searchParams.get("refer");
+  const [code, setCode] = useState("");
   const [output, setOutput] = useState(false);
   const editorRef = useRef<HTMLDivElement>(null);
 
@@ -31,7 +31,7 @@ export default function HtmlEditor() {
       <div className="tw:flex tw:flex-col tw:h-screen tw:overflow-hidden">
         <div className="tw:bg-gray-800  tw:flex tw:justify-between tw:items-center tw:p-4!">
           <a
-            href="/"
+            href={refer ?? "/"}
             className="tw:text-white! tw:font-semibold tw:flex! tw:gap-2! tw:items-center! "
           >
             <IoArrowBackOutline />
