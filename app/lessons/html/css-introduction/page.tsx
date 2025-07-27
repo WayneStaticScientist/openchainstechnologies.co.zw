@@ -1,5 +1,7 @@
 import React from "react";
-import CodeReviewPager from "@/components/tutorials/tutorial-slider";
+import CodeReviewPager, {
+  CssBoxHightLight,
+} from "@/components/tutorials/tutorial-slider";
 import PageNavigationButtons from "@/components/navigations-button";
 import { HtmlChapterFootMap } from "@/utils/chapters-html";
 import { baseUrl } from "@/utils/globals";
@@ -345,7 +347,7 @@ export default function CssIntroPage() {
                 First, let's look at the content of a typical external CSS file
                 (`styles.css`):
               </p>
-              <CodeReviewPager code={section3} />
+              <CssBoxHightLight code={section3} />
               <p className="tw:text-gray-700! tw:leading-relaxed! tw:mt-4! tw:font-bold! tw:mb-2!">
                 Now, how we link this CSS file to our HTML document:
               </p>

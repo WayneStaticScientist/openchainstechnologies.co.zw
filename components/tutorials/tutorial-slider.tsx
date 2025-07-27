@@ -1,11 +1,17 @@
 "use client";
-import { codeReviewPagerCode } from "@/utils/constants";
-import { useRouter } from "next/navigation";
 import React, { useState } from "react";
+import { useRouter } from "next/navigation";
+import { codeReviewPagerCode } from "@/utils/constants";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { a11yDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 
-export default function CodeReviewPager({ code }: { code: string }) {
+export default function CodeReviewPager({
+  code,
+  highLightLanguage = "html",
+}: {
+  code: string;
+  highLightLanguage?: string;
+}) {
   const router = useRouter();
   const [highlighterHeight, setHighlighterHeight] = useState(0);
   const [highlighterWidth, setHighlighterWidth] = useState(0);
@@ -56,7 +62,7 @@ export default function CodeReviewPager({ code }: { code: string }) {
           }}
         >
           <SyntaxHighlighter
-            language="html"
+            language={highLightLanguage}
             style={a11yDark}
             wrapLongLines={true}
             customStyle={{
@@ -97,3 +103,20 @@ export default function CodeReviewPager({ code }: { code: string }) {
     </div>
   );
 }
+export const CssBoxHightLight = ({ code }: { code: string }) => {
+  return (
+    <div className="tw:w-full! tw:max-w-4xl! tw:mx-auto! tw:bg-white! tw:rounded-lg! tw:shadow-lg! tw:overflow-hidden! tw:my-8!">
+      <SyntaxHighlighter
+        language="css"
+        style={a11yDark}
+        wrapLongLines={true}
+        customStyle={{
+          fontFamily: "sans-serif",
+          fontSize: 20,
+        }}
+      >
+        {code}
+      </SyntaxHighlighter>
+    </div>
+  );
+};

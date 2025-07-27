@@ -93,7 +93,10 @@ export default function Header() {
                     >
                       Html and Css
                     </a>
-                    <a className="dropdown-item" href="/lessons/javascript">
+                    <a
+                      className="dropdown-item"
+                      href="/lessons/javascript/introduction"
+                    >
                       Javascript
                     </a>
                     <a className="dropdown-item" href="/lessons/python">
@@ -171,14 +174,10 @@ export default function Header() {
                     Live Chat
                   </a>
                 </li>
-                {/* list unstyled */}
               </ul>
-              {/* header contact */}
             </div>
           </nav>
-          {/* container */}
         </div>
-        {/* header-con */}
       </header>
     </>
   );
