@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import { codeReviewPagerCode } from "@/utils/constants";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { a11yDark } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 export default function CodeReviewPager({
   code,
@@ -63,7 +63,7 @@ export default function CodeReviewPager({
         >
           <SyntaxHighlighter
             language={highLightLanguage}
-            style={a11yDark}
+            style={vscDarkPlus}
             wrapLongLines={true}
             customStyle={{
               fontFamily: "sans-serif",
@@ -108,7 +108,7 @@ export const CssBoxHightLight = ({ code }: { code: string }) => {
     <div className="tw:w-full! tw:max-w-4xl! tw:mx-auto! tw:bg-white! tw:rounded-lg! tw:shadow-lg! tw:overflow-hidden! tw:my-8!">
       <SyntaxHighlighter
         language="css"
-        style={a11yDark}
+        style={vscDarkPlus}
         wrapLongLines={true}
         customStyle={{
           fontFamily: "sans-serif",
