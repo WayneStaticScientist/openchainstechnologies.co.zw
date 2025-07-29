@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import React from "react";
 import { FaBars } from "react-icons/fa";
 import { SiLivechat } from "react-icons/si";
@@ -9,11 +10,11 @@ export default function Header() {
       <header className="w-100 float-left header-con main-box position-relative">
         <div className="container">
           <nav className="navbar navbar-expand-lg navbar-light">
-            <a className="navbar-brand" href="/">
+            <Link className="navbar-brand" href="/">
               <figure className="mb-0">
                 <img src="/assets/images/logo.png" alt="logo-icon" />
               </figure>
-            </a>
+            </Link>
             <button
               className="navbar-toggler collapsed"
               type="button"
@@ -31,17 +32,17 @@ export default function Header() {
             >
               <ul className="navbar-nav ml-auto">
                 <li className="nav-item">
-                  <a className="nav-link p-0" href="/">
+                  <Link className="nav-link p-0" href="/">
                     Home
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link p-0" href="/about">
+                  <Link className="nav-link p-0" href="/about">
                     About
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item dropdown">
-                  <a
+                  <Link
                     className="nav-link dropdown-toggle p-0"
                     href="#"
                     id="navbarDropdown2"
@@ -51,28 +52,28 @@ export default function Header() {
                     aria-expanded="false"
                   >
                     Services
-                  </a>
+                  </Link>
                   <div
                     className="dropdown-menu"
                     aria-labelledby="navbarDropdown2"
                   >
-                    <a className="dropdown-item" href="/web">
+                    <Link className="dropdown-item" href="/web">
                       Websites
-                    </a>
-                    <a className="dropdown-item" href="/electronics">
+                    </Link>
+                    <Link className="dropdown-item" href="/electronics">
                       Electronics
-                    </a>
-                    <a className="dropdown-item" href="/app">
+                    </Link>
+                    <Link className="dropdown-item" href="/app">
                       Application Development
-                    </a>
-                    <a className="dropdown-item" href="/ai">
+                    </Link>
+                    <Link className="dropdown-item" href="/ai">
                       Robotics And AI
-                    </a>
+                    </Link>
                   </div>
                 </li>
 
                 <li className="nav-item dropdown">
-                  <a
+                  <Link
                     className="nav-link dropdown-toggle p-0"
                     href="#"
                     id="navbarDropdown5"
@@ -82,45 +83,45 @@ export default function Header() {
                     aria-expanded="false"
                   >
                     Lessons
-                  </a>
+                  </Link>
                   <div
                     className="dropdown-menu"
                     aria-labelledby="navbarDropdown5"
                   >
-                    <a
+                    <Link
                       className="dropdown-item"
                       href="/lessons/html/introduction"
                     >
                       Html and Css
-                    </a>
-                    <a
+                    </Link>
+                    <Link
                       className="dropdown-item"
                       href="/lessons/javascript/introduction"
                     >
                       Javascript
-                    </a>
-                    <a className="dropdown-item" href="/lessons/python">
+                    </Link>
+                    <Link className="dropdown-item" href="/lessons/python">
                       Python
-                    </a>
-                    <a className="dropdown-item" href="/lessons/react">
+                    </Link>
+                    <Link className="dropdown-item" href="/lessons/react">
                       React
-                    </a>
-                    <a className="dropdown-item" href="/lessons/java">
+                    </Link>
+                    <Link className="dropdown-item" href="/lessons/java">
                       Java
-                    </a>
-                    <a className="dropdown-item" href="/lessons/golang">
+                    </Link>
+                    <Link className="dropdown-item" href="/lessons/golang">
                       Golang
-                    </a>
-                    <a className="dropdown-item" href="/lessons/php">
+                    </Link>
+                    <Link className="dropdown-item" href="/lessons/php">
                       PHP
-                    </a>
-                    <a className="dropdown-item" href="/lessons/big">
+                    </Link>
+                    <Link className="dropdown-item" href="/lessons/big">
                       Build Something Big
-                    </a>
+                    </Link>
                   </div>
                 </li>
                 <li className="nav-item dropdown">
-                  <a
+                  <Link
                     className="nav-link dropdown-toggle p-0"
                     href="#"
                     id="navbarDropdown4"
@@ -130,34 +131,34 @@ export default function Header() {
                     aria-expanded="false"
                   >
                     Openchains
-                  </a>
+                  </Link>
                   <div
                     className="dropdown-menu"
                     aria-labelledby="navbarDropdown4"
                   >
-                    <a
+                    <Link
                       className="dropdown-item"
                       href={`/editor/html?refer=${encodeURIComponent(
                         window.location.pathname
                       )}`}
                     >
                       Live Html Editor
-                    </a>
-                    <a className="dropdown-item" href="/founder">
+                    </Link>
+                    <Link className="dropdown-item" href="/founder">
                       Founder
-                    </a>
-                    <a className="dropdown-item" href="#">
+                    </Link>
+                    <Link className="dropdown-item" href="#">
                       Openchains News
-                    </a>
-                    <a className="dropdown-item" href="#">
+                    </Link>
+                    <Link className="dropdown-item" href="#">
                       Openchains Business
-                    </a>
-                    <a className="dropdown-item" href="/apis/email">
+                    </Link>
+                    <Link className="dropdown-item" href="/apis/email">
                       Openchains Email Api
-                    </a>
-                    <a className="dropdown-item" href="/apis/libraries">
+                    </Link>
+                    <Link className="dropdown-item" href="/apis/libraries">
                       Openchains Libraries
-                    </a>
+                    </Link>
                   </div>
                 </li>
               </ul>
@@ -166,13 +167,13 @@ export default function Header() {
             <div className="header-contact">
               <ul className="list-unstyled mb-0">
                 <li>
-                  <a
+                  <Link
                     href="/chat"
                     className="live-chat tw:flex tw:items-center tw:justify-center tw:gap-2"
                   >
                     <SiLivechat />
                     Live Chat
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>

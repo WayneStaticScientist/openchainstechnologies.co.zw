@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 export default function Pricing() {
@@ -81,9 +82,9 @@ export default function Pricing() {
                 </li>
               </ul>
               <div className="primary-button d-inline-block">
-                <a href="/hosting/email" className="d-inline-block">
+                <Link href="/hosting/email" className="d-inline-block">
                   Order Now <i className="fas fa-arrow-right ml-2" />
-                </a>
+                </Link>
               </div>
               {/* plan box */}
             </div>
@@ -131,9 +132,9 @@ export default function Pricing() {
                 </li>
               </ul>
               <div className="primary-button d-inline-block">
-                <a href="/hosting/web100" className="d-inline-block">
+                <Link href="/hosting/web100" className="d-inline-block">
                   Order Now <i className="fas fa-arrow-right ml-2" />
-                </a>
+                </Link>
               </div>
               {/* plan box */}
             </div>
@@ -180,9 +181,9 @@ export default function Pricing() {
                 </li>
               </ul>
               <div className="primary-button d-inline-block">
-                <a href="/hosting/ecommerce" className="d-inline-block">
+                <Link href="/hosting/ecommerce" className="d-inline-block">
                   Order Now <i className="fas fa-arrow-right ml-2" />
-                </a>
+                </Link>
               </div>
               {/* plan box */}
             </div>

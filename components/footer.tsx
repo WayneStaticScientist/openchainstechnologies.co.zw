@@ -1,5 +1,6 @@
 import React from "react";
 import { Globals } from "@/utils/globals";
+import Link from "next/link";
 export default function Footer() {
   return (
     <>
@@ -12,27 +13,27 @@ export default function Footer() {
                 <ul className="list-unstyled p-0 m-0">
                   <li>
                     <i className="fa-solid fa-circle" />
-                    <a href="#" className="d-inline-block">
+                    <Link href="#" className="d-inline-block">
                       Lessons
-                    </a>
+                    </Link>
                   </li>
                   <li>
                     <i className="fa-solid fa-circle" />
-                    <a href="#" className="d-inline-block">
+                    <Link href="#" className="d-inline-block">
                       Electrical Engineering
-                    </a>
+                    </Link>
                   </li>
                   <li>
                     <i className="fa-solid fa-circle" />
-                    <a href="#" className="d-inline-block">
+                    <Link href="#" className="d-inline-block">
                       Web development
-                    </a>
+                    </Link>
                   </li>
                   <li className="mb-0">
                     <i className="fa-solid fa-circle" />
-                    <a href="#" className="d-inline-block">
+                    <Link href="#" className="d-inline-block">
                       Game Development
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -44,27 +45,27 @@ export default function Footer() {
                 <ul className="list-unstyled p-0 m-0">
                   <li>
                     <i className="fa-solid fa-circle" />
-                    <a href="/about" className="d-inline-block">
+                    <Link href="/about" className="d-inline-block">
                       About Us
-                    </a>
+                    </Link>
                   </li>
                   <li>
                     <i className="fa-solid fa-circle" />
-                    <a href="/services" className="d-inline-block">
+                    <Link href="/services" className="d-inline-block">
                       Services
-                    </a>
+                    </Link>
                   </li>
                   <li>
                     <i className="fa-solid fa-circle" />
-                    <a href="/pricing-calculator" className="d-inline-block">
+                    <Link href="/pricing-calculator" className="d-inline-block">
                       Pricing calculator
-                    </a>
+                    </Link>
                   </li>
                   <li>
                     <i className="fa-solid fa-circle" />
-                    <a href="/contact" className="d-inline-block">
+                    <Link href="/contact" className="d-inline-block">
                       Contact Us
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -75,27 +76,27 @@ export default function Footer() {
                 <ul className="list-unstyled p-0 m-0">
                   <li>
                     <i className="fa-solid fa-circle" />
-                    <a href="/editor/html" className="d-inline-block">
+                    <Link href="/editor/html" className="d-inline-block">
                       Html Live Editor
-                    </a>
+                    </Link>
                   </li>
                   <li>
                     <i className="fa-solid fa-circle" />
-                    <a href="/apis/libraries" className="d-inline-block">
+                    <Link href="/apis/libraries" className="d-inline-block">
                       Apis
-                    </a>
+                    </Link>
                   </li>
                   <li>
                     <i className="fa-solid fa-circle" />
-                    <a href="/lessons/big" className="d-inline-block">
+                    <Link href="/lessons/big" className="d-inline-block">
                       Building Big Apps
-                    </a>
+                    </Link>
                   </li>
                   <li>
                     <i className="fa-solid fa-circle" />
-                    <a href="/hosting/others" className="d-inline-block">
+                    <Link href="/hosting/others" className="d-inline-block">
                       Cart
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -110,10 +111,10 @@ export default function Footer() {
                       alt="icon"
                       className="img-fluid"
                     />{" "}
-                    <a href="https://maps.app.goo.gl/x2i4YdHeDkndHuTD6">
+                    <Link href="https://maps.app.goo.gl/x2i4YdHeDkndHuTD6">
                       {Globals.Address} <br />
                       {Globals.City}
-                    </a>
+                    </Link>
                   </li>
                   <li className="position-relative">
                     <img
@@ -121,7 +122,7 @@ export default function Footer() {
                       alt="icon"
                       className="img-fluid"
                     />
-                    <a href={`tel:${Globals.Phone}`}>{Globals.Phone}</a>
+                    <Link href={`tel:${Globals.Phone}`}>{Globals.Phone}</Link>
                   </li>
                   <li className="position-relative mb-0">
                     <img
@@ -129,7 +130,9 @@ export default function Footer() {
                       alt="icon"
                       className="img-fluid"
                     />
-                    <a href={`mailto:${Globals.Email}`}>{Globals.Email}</a>
+                    <Link href={`mailto:${Globals.Email}`}>
+                      {Globals.Email}
+                    </Link>
                   </li>
                 </ul>
                 {/* footer inner links */}
@@ -142,34 +145,34 @@ export default function Footer() {
             <div className="copyright-content">
               <p className="mb-0 text-white">
                 Copyright {new Date().getFullYear()}
-                <a className="d-inline-block orange-text tw:mx-3!" href="/">
+                <Link className="d-inline-block orange-text tw:mx-3!" href="/">
                   {" "}
                   Openchains Technologies
-                </a>
+                </Link>
                 All Rights Reserved
               </p>
               {/* copyright content */}
             </div>
             <ul className="list-unstyled p-0 m-0 d-flex align-items-center social-icon">
               <li>
-                <a href={Globals.Facebook}>
+                <Link href={Globals.Facebook}>
                   <i className="fa-brands fa-facebook-f ml-0" />
-                </a>
+                </Link>
               </li>
               <li>
-                <a href={Globals.LinkedIn}>
+                <Link href={Globals.LinkedIn}>
                   <i className="fa-brands fa-linkedin-in" />
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#">
+                <Link href="#">
                   <i className="fa-brands fa-x-twitter" />
-                </a>
+                </Link>
               </li>
               <li>
-                <a href={Globals.Facebook} className="mr-0">
+                <Link href={Globals.Facebook} className="mr-0">
                   <i className="fa-brands fa-facebook" />
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

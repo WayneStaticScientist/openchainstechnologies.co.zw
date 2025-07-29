@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 export default function NotFould() {
@@ -31,9 +32,9 @@ export default function NotFould() {
                   404 , it means it might be broken also
                 </p>
                 <div className="secondary-button d-inline-block">
-                  <a href="/" className="d-inline-block">
+                  <Link href="/" className="d-inline-block">
                     <i className="fas fa-arrow-left mr-2" /> Back to Homepage{" "}
-                  </a>
+                  </Link>
                 </div>
               </div>
               {/* col */}

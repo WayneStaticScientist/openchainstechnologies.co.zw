@@ -4,6 +4,7 @@ import { Globals } from "@/utils/globals";
 import { IoLogoInstagram } from "react-icons/io";
 import { HtmlChapterFootMap } from "@/utils/chapters-html";
 import { BiLogoFacebook, BiLogoWhatsapp, BiLogoYoutube } from "react-icons/bi";
+import Link from "next/link";
 
 export default function layout({
   children,
@@ -30,10 +31,10 @@ export default function layout({
                     <span>{i + 1}</span> {e.title}
                   </span>
                 ) : (
-                  <a href={e.path} className="tw:flex tw:gap-3">
+                  <Link href={e.path} className="tw:flex tw:gap-3">
                     <span>{i + 1}</span>
                     {e.title}
-                  </a>
+                  </Link>
                 )}
               </li>
             ))}

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 export default function SecurityFeatures() {
@@ -104,9 +105,9 @@ export default function SecurityFeatures() {
         </div>
         <div className="float-left w-100 position-relative text-center view-all-features-con">
           <div className="elementary-button d-inline-block">
-            <a href="/services" className="d-inline-block">
+            <Link href="/services" className="d-inline-block">
               View All Services <i className="fas fa-arrow-right ml-2" />{" "}
-            </a>
+            </Link>
           </div>
         </div>
       </div>

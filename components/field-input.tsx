@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import { IoMdAppstore } from "react-icons/io";
 import { LuBellElectric } from "react-icons/lu";
@@ -73,12 +74,12 @@ export default function FieldInput() {
                   </li>
                 </ul>
                 <div className="button_links d-flex align-items-center position-relative">
-                  <a href="/contact" className="register">
+                  <Link href="/contact" className="register">
                     Request a Quote
-                  </a>
-                  <a href="/services" className="transfer">
+                  </Link>
+                  <Link href="/services" className="transfer">
                     View Services
-                  </a>
+                  </Link>
                   {/* button links */}
                 </div>
                 {/* domain logo links */}

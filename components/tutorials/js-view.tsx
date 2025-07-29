@@ -29,6 +29,7 @@ export default function JavascriptViewCode({
   const [activeTab, setActiveTab] = useState("code");
 
   React.useEffect(() => {
+    setConsoleLogsLists([]);
     if (highlighterRef.current) {
       const height = highlighterRef.current.scrollHeight;
       const width = highlighterRef.current.scrollWidth;
@@ -37,15 +38,17 @@ export default function JavascriptViewCode({
     }
   }, [code]);
   const addItem = (message: string, color: string) => {
-    consoleLogLists.push({
-      message: message,
-      color: color,
-      lineNumber:
-        consoleLogLists.length > 0
-          ? consoleLogLists[consoleLogLists.length - 1].lineNumber + 1
-          : 1,
-    });
-    setConsoleLogsLists([...consoleLogLists]);
+    setConsoleLogsLists((prev) => [
+      ...prev,
+      {
+        message: message,
+        color: color,
+        lineNumber:
+          consoleLogLists.length > 0
+            ? consoleLogLists[consoleLogLists.length - 1].lineNumber + 1
+            : 1,
+      },
+    ]);
   };
   React.useEffect(() => {
     const handleMessage = (event: MessageEvent<any>) => {
@@ -77,24 +80,6 @@ export default function JavascriptViewCode({
 
   return (
     <div className="tw:w-full! tw:max-w-4xl! tw:mx-auto! tw:bg-white! tw:rounded-lg! tw:shadow-lg! tw:overflow-hidden! tw:my-8!">
-      <iframe
-        srcDoc={`
-      <!DOCTYPE html>
-      <html>
-      <head>
-          <title>Iframe Sandbox</title>
-      </head>
-      <body>
-          ${htmlInjection ? htmlInjection : ""}
-          <script>${getOverrideScript(indexNumber)}</script>
-          <script>${code}</script>
-      </body>
-      </html>
-    `}
-        ref={iframeRef}
-        width={0}
-        height={0}
-      />
       <div className="tw:flex! tw:border-b! tw:border-gray-200!">
         <button
           className={`tw:flex-1! tw:py-3! tw:px-4! tw:text-center! tw:font-semibold! tw:text-lg! tw:transition-colors! tw:duration-200! ${
@@ -102,7 +87,10 @@ export default function JavascriptViewCode({
               ? "tw:bg-indigo-600! tw:text-white!"
               : "tw:bg-gray-100! tw:text-gray-700! hover:tw:bg-gray-200!"
           }`}
-          onClick={() => setActiveTab("code")}
+          onClick={() => {
+            setActiveTab("code");
+            setConsoleLogsLists([]);
+          }}
         >
           Code
         </button>
@@ -112,7 +100,9 @@ export default function JavascriptViewCode({
               ? "tw:bg-indigo-600! tw:text-white!"
               : "tw:bg-gray-100! tw:text-gray-700! hover:tw:bg-gray-200!"
           }`}
-          onClick={() => setActiveTab("output")}
+          onClick={() => {
+            setActiveTab("output");
+          }}
         >
           Output
         </button>
@@ -127,6 +117,24 @@ export default function JavascriptViewCode({
             transition: "height 0.3s ease-in-out",
           }}
         >
+          <iframe
+            srcDoc={`
+      <!DOCTYPE html>
+      <html>
+      <head>
+          <title>Iframe Sandbox</title>
+      </head>
+      <body>
+          ${htmlInjection ? htmlInjection : ""}
+          <script>${getOverrideScript(indexNumber)}</script>
+          <script>${code}</script>
+      </body>
+      </html>
+    `}
+            ref={iframeRef}
+            width={0}
+            height={0}
+          />
           <SyntaxHighlighter
             language={highLightLanguage}
             style={vscDarkPlus}
@@ -167,14 +175,13 @@ export default function JavascriptViewCode({
           <div className="tw:absolute! tw:top-0! tw:right-0! tw:left-0! tw:h-full! tw:bg-background!">
             <ul className="tw:flex! tw:flex-col! tw:w-full!  tw:overflow-y-auto! tw:h-full!">
               {consoleLogLists.map((log, index) => (
-                <React.Fragment key={index}>
-                  <li
-                    className="tw:p-3! tw:w-full! tw:border-b! tw:border-gray-200! tw:flex! tw:items-center! tw:gap-2!"
-                    style={{ color: log.color }}
-                  >
-                    {log.lineNumber}.{getOutputIcon(log.color)} {log.message}
-                  </li>
-                </React.Fragment>
+                <li
+                  key={index}
+                  className="tw:p-3! tw:w-full! tw:border-b! tw:border-gray-200! tw:flex! tw:items-center! tw:gap-2!"
+                  style={{ color: log.color }}
+                >
+                  {log.lineNumber}.{getOutputIcon(log.color)} {log.message}
+                </li>
               ))}
             </ul>
           </div>

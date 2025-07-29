@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 export default function BreadCrump({
@@ -16,7 +17,7 @@ export default function BreadCrump({
           <div className="breadcrumb-con d-inline-block">
             <ol className="breadcrumb mb-0">
               <li className="breadcrumb-item">
-                <a href="/">Home</a>
+                <Link href="/">Home</Link>
               </li>
               <li className="breadcrumb-item active" aria-current="page">
                 {page}

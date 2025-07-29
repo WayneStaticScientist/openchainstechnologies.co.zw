@@ -129,7 +129,7 @@ export default function HtmlTutorialsPage() {
  </header>
  <main>
  <p>This is a paragraph of text.</p>
- <a href="https://www.openchainstechnologies.co.zw">Visit Openchains Technologies</a>
+ <a href="https://openchains.shop">Visit Openchains Technologies</a>
  </main>
  <footer>
  <p>&copy; 2024 Openchains Technologies</p>

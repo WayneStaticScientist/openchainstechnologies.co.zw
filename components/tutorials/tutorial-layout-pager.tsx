@@ -1,4 +1,5 @@
 import { Globals } from "@/utils/globals";
+import Link from "next/link";
 import React from "react";
 import { BiLogoFacebook, BiLogoWhatsapp, BiLogoYoutube } from "react-icons/bi";
 import { IoLogoInstagram } from "react-icons/io";
@@ -29,7 +30,7 @@ export default function TutorialsLayoutPager({
                 <ul className="list-unstyled mb-0">
                   {chapterSection.map((e, i) => (
                     <li key={i} className="text-size-16">
-                      <a href={e.path}>{e.title}</a>
+                      <Link href={e.path}>{e.title}</Link>
                     </li>
                   ))}
                 </ul>

@@ -74,9 +74,9 @@ export default function Projects() {
                                 <span>{e.tag}</span>
                               </h6>
                               <h4>
-                                <a href={e.path} target="_blank">
+                                <Link href={e.path} target="_blank">
                                   {e.title}
-                                </a>
+                                </Link>
                               </h4>
                               <ul>
                                 <li>

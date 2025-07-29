@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 export default function Experience2() {
@@ -45,9 +46,9 @@ export default function Experience2() {
                   businesses with cutting-edge technology.
                 </p>
                 <div className="secondary-button d-inline-block">
-                  <a href="/contact" className="d-inline-block">
+                  <Link href="/contact" className="d-inline-block">
                     Contact Us <i className="fas fa-arrow-right ml-2" />
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
