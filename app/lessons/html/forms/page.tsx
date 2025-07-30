@@ -302,7 +302,7 @@ const section6_3 = `<!DOCTYPE html>
 </html>`;
 
 export default function HtmlFormsPage() {
-  const page = 5; // Assuming this is the 5th page in your tutorial series (0-indexed)
+  const page = 7; // Assuming this is the 5th page in your tutorial series (0-indexed)
   return (
     <>
       <div className="col-lg-8 col-md-12 col-sm-12 col-12">
