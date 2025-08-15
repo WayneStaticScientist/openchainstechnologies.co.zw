@@ -44,12 +44,7 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
-        <script
-          src="https://fpyf8.com/88/tag.min.js"
-          data-zone="163334"
-          async
-          data-cfasync="false"
-        ></script>
+
         <title>
           OpenChains Technologies - World Of Innovating Technologies
         </title>
