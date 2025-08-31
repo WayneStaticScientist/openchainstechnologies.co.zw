@@ -3,57 +3,63 @@ import Footer from "@/components/footer";
 import Header from "@/components/header";
 import { IoLogoInstagram } from "react-icons/io";
 import BreadCrump from "@/components/breadcrump";
-import { baseUrl, Globals } from "@/utils/globals";
 import { BiLogoFacebook, BiLogoWhatsapp, BiLogoYoutube } from "react-icons/bi";
-export const metadata = {
+import { Globals } from "@/utils/globals";
+import { Metadata } from "next";
+export const metadata: Metadata = Globals.getMetaData({
   title: "App Services",
   description:
     "Explore our app services designed to meet your business needs and drive innovation.",
-  alternates: {
-    canonical: baseUrl + "/app",
-  },
-};
+  path: "/app",
+});
+
 export default function AppServices() {
   return (
     <>
       <Header />
-      <BreadCrump page={"appservices"} title={"App Development"} summary={"Discover our comprehensive app development services for mobile, desktop, and more."} />
+      <BreadCrump
+        page={"appservices"}
+        title={"App Development"}
+        summary={
+          "Discover our comprehensive app development services for mobile, desktop, and more."
+        }
+      />
       <section
-      className="singleblog-section blogpage-section gradient"
-      id="single"
+        className="singleblog-section blogpage-section gradient"
+        id="single"
       >
-      <div
-        className="container wow fadeIn"
-        data-wow-duration="2s"
-        data-wow-delay="0.3s"
-      >
-        <div className="row">
-        <div className="col-lg-8 col-md-12 col-sm-12 col-12">
-          <div className="main-box">
-          <figure className="image1 mb-3">
-            <img
-            src="/assets/img/app.jpg"
-            alt="OpenChains App Development"
-            className="img-fluid"
-            loading="lazy"
-            />
-          </figure>
-          <div className="content1">
-            <h4>
-            OpenChains App Development: Powering Your Ideas Across
-            Platforms
-            </h4>
-            <div className="span-fa-outer-con">
-            <i className="fa-solid fa-user" />
-            <span className="text-size-14 text-mr">
-              By : Wayne Scientist
-            </span>
-            <i className="mb-0 calendar fa-solid fa-calendar-days" />
-            <span className="mb-0 text-size-14">Senior Engineer</span>
-            </div>
-            <p className="text-size-14">
-            At OpenChains, we specialize in developing a wide range of
-            applications for both mobile and desktop platforms. Our
+        <div
+          className="container wow fadeIn"
+          data-wow-duration="2s"
+          data-wow-delay="0.3s"
+        >
+          <div className="row">
+            <div className="col-lg-8 col-md-12 col-sm-12 col-12">
+              <div className="main-box">
+                <figure className="image1 mb-3">
+                  <img
+                    src="/assets/img/app.jpg"
+                    alt="OpenChains App Development"
+                    className="img-fluid"
+                    loading="lazy"
+                  />
+                </figure>
+                <div className="content1">
+                  <h4>
+                    OpenChains App Development: Powering Your Ideas Across
+                    Platforms
+                  </h4>
+                  <div className="span-fa-outer-con">
+                    <i className="fa-solid fa-user" />
+                    <span className="text-size-14 text-mr">
+                      By : Wayne Scientist
+                    </span>
+                    <i className="mb-0 calendar fa-solid fa-calendar-days" />
+                    <span className="mb-0 text-size-14">Senior Engineer</span>
+                  </div>
+                  <p className="text-size-14">
+                    At OpenChains, we specialize in developing a wide range of
+                    applications for both mobile and desktop platforms. Our
                     expertise covers professional business apps, engaging games
                     for kids, challenging puzzles, and innovative streaming
                     apps. Whether you need a custom solution for your business

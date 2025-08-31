@@ -1,6 +1,7 @@
 /** @jsxImportSource react */
 import { ReactNode } from "react";
 import emailjs from "@emailjs/react-native";
+import { Metadata } from "next";
 
 export class Globals {
   public static City = "Harare";
@@ -108,6 +109,71 @@ export class Globals {
         days: 0,
       },
     ];
+  }
+  static getOpenGraph(title: string, description: string) {
+    return {
+      type: "website",
+      locale: "en_US",
+      url: baseUrl,
+      title,
+      description,
+      mages: [
+        {
+          url: `${baseUrl}/opengraph-image.png`,
+          width: 1200,
+          height: 630,
+          alt: "Openchains Technologies Logo",
+        },
+      ],
+      siteName: "Openchains Technologies",
+    };
+  }
+  static getMetaData({
+    title,
+    description,
+    image,
+    path,
+  }: {
+    path: string;
+    image?: string;
+    title: string;
+    description: string;
+  }): Metadata {
+    return {
+      title: `${title} - Openchains`,
+      description,
+      alternates: {
+        canonical: baseUrl + path, // Self-referencing canonical
+      },
+      metadataBase: new URL(baseUrl),
+      robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+          index: true,
+          follow: true,
+          "max-video-preview": -1,
+          "max-image-preview": "large",
+          "max-snippet": -1,
+        },
+      },
+      openGraph: {
+        type: "website",
+        locale: "en_US",
+        url: baseUrl + path,
+        title,
+        description,
+        images: [
+          {
+            url: `${baseUrl}/opengraph-image.png`,
+            width: 1200,
+            height: 630,
+            alt: "Openchains Technologies Logo",
+          },
+        ],
+        siteName: `Openchains`,
+      },
+    };
   }
   static getAppssPrices(): Array<{
     name: string;

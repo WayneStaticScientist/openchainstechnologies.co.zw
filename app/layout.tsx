@@ -1,5 +1,5 @@
-"use client";
 import "./style.css";
+import React from "react";
 import "./assets/css/shop.css";
 import "./assets/css/blog.css";
 import "./assets/css/custom.css";
@@ -9,61 +9,49 @@ import "./assets/css/responsive.css";
 import "./assets/css/priceslider.css";
 import "./assets/css/superclasses.css";
 import { Toaster } from "react-hot-toast";
+import { Globals } from "@/utils/globals";
 import "./assets/css/owl.carousel.min.css";
 import "./assets/bootstrap/bootstrap.min.css";
 import "./assets/css/owl.theme.default.min.css";
-import React, { useEffect } from "react";
-import { SplashRoboticLoader } from "@/components/splash-loader";
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://openchains.shop";
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const websiteSchema = {
+  const organizationSchema = {
     "@context": "https://schema.org",
-    "@type": "WebSite",
-    name: "Openchains Technologies",
-    alternateName: ["Openchains", "OpenTech"],
+    "@type": "Organization",
+    name: "OpenChains Technologies",
     url: baseUrl,
+    logo: `${baseUrl}/assets/img/logo/web.png`, // Be sure to have a logo at this path
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+263-78-760-4187",
+      contactType: "customer service",
+    },
+    sameAs: [Globals.Facebook],
   };
-  const [loading, setLoading] = React.useState(true);
-  useEffect(() => {
-    setLoading(false);
-  }, []);
   return (
     <html lang="en">
       <head>
         <script
+          id="website-schema" //
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema),
+          }}
+        />
+        <Script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6526622657854258"
           crossOrigin="anonymous"
-        ></script>
-        <script
-          id="website-schema" //
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
-        />
-
-        <title>
-          OpenChains Technologies - World Of Innovating Technologies
-        </title>
-        <meta
-          name="keywords"
-          content="electronics, web design, system design, web technologies, AI, chatbots, openchains, zimbabwe, websites"
-        />
-        <meta
-          name="description"
-          content="Websites development, apps development, games development & custom software for businesses & individuals. OpenChains Technologies: digital solutions in Zimbabwe"
-        />
-        <meta property="og:site_name" content="Openchains Technologies" />
-        <meta property="og:url" content={baseUrl} />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Openchains Technologies" />
+          strategy="beforeInteractive" // Loads the script before hydration
+        ></Script>
       </head>
       <body>
         <Toaster />
-        {loading ? <SplashRoboticLoader /> : children}
+        {children}
         <Script
           src="/assets/js/jquery.min.js"
           strategy="afterInteractive"

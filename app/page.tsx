@@ -1,23 +1,22 @@
 import React from "react";
 import { Metadata } from "next";
+import Footer from "@/components/footer";
 import Header from "@/components/header";
 import Pricing from "@/components/pricing";
+import { Globals } from "@/utils/globals";
+import Partners from "@/components/partner";
 import Experience from "@/components/experience";
 import FieldInput from "@/components/field-input";
-import HeroSection from "@/components/hero-section";
-import SecurityFeatures from "@/components/securitty-features";
-import OtherThings from "@/components/other-things";
 import Testimonial from "@/components/testimonial";
-import Partners from "@/components/partner";
-import Footer from "@/components/footer";
-
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://openchains.shop";
-export const metadata: Metadata = {
-  alternates: {
-    canonical: baseUrl, // Self-referencing canonical
-  },
-  metadataBase: new URL(baseUrl),
-};
+import HeroSection from "@/components/hero-section";
+import OtherThings from "@/components/other-things";
+import SecurityFeatures from "@/components/securitty-features";
+export const metadata: Metadata = Globals.getMetaData({
+  title: "Home",
+  description:
+    "Openchains Technologies provides comprehensive digital solutions, specializing in software development, including blockchain integration, web and mobile applications, interactive game design, and embedded systems.",
+  path: "",
+});
 export default function App() {
   return (
     <>

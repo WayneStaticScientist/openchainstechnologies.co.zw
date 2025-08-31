@@ -1,5 +1,4 @@
 import About from "@/components/about";
-import AboutExtend from "@/components/about-extend";
 import BreadCrump from "@/components/breadcrump";
 import Experience2 from "@/components/experience2";
 import Faqs from "@/components/faqs";
@@ -9,33 +8,21 @@ import Partners from "@/components/partner";
 import Testimonial from "@/components/testimonial";
 import WhyChooseUs from "@/components/why-choose-us";
 import { baseUrl, Globals } from "@/utils/globals";
+import { Metadata } from "next";
 import React from "react";
-
-export const metadata = {
+export const metadata: Metadata = Globals.getMetaData({
   title: "About",
-  keywords: [
-    "OpenChains Technologies",
-    "About OpenChains",
-    "Software Solutions Zimbabwe",
-    "Electronics Solutions",
-    "Innovative Technology",
-    "Tech Team Zimbabwe",
-    "Business Success",
-    "Mission and Vision",
-  ],
   description:
     "Learn about OpenChains, our mission, vision, and the team behind our innovative software solutions.",
-  alternates: {
-    canonical: baseUrl + "/about", // Self-referencing canonical
-  },
-};
+  path: "/about",
+});
 export default function AboutPage() {
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "OpenChains Technologies",
-    url: baseUrl + "/about",
-    logo: "/favicon.ico",
+    url: baseUrl,
+    logo: `${baseUrl}/assets/img/logo/web.png`, // Use a proper image file for the logo
     contactPoint: {
       "@type": "ContactPoint",
       telephone: Globals.Phone,
@@ -53,17 +40,27 @@ export default function AboutPage() {
     },
     description:
       "OpenChains Technologies is a leading technology company specializing in electronics, software, robotics, and future technologies.",
+    sameAs: [
+      Globals.Facebook, // Add links to your social media profiles
+      // Add other social media links
+    ],
   };
 
+  const StructuredData = ({
+    schema,
+  }: {
+    schema: typeof organizationSchema;
+  }) => (
+    <script
+      id="schema-organization"
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
   return (
     <>
-      <script
-        id="organization-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
-      />
+      <StructuredData schema={organizationSchema} />
       <Header />
-
       <BreadCrump
         page={"about"}
         title={"About"}
