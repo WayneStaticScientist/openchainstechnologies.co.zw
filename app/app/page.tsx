@@ -1,11 +1,11 @@
 import React from "react";
+import { Metadata } from "next";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
+import { Globals } from "@/utils/globals";
 import { IoLogoInstagram } from "react-icons/io";
 import BreadCrump from "@/components/breadcrump";
 import { BiLogoFacebook, BiLogoWhatsapp, BiLogoYoutube } from "react-icons/bi";
-import { Globals } from "@/utils/globals";
-import { Metadata } from "next";
 export const metadata: Metadata = Globals.getMetaData({
   title: "App Services",
   description:
