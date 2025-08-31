@@ -117,14 +117,14 @@ export class Globals {
       url: baseUrl,
       title,
       description,
-      mages: [
-        {
-          url: `${baseUrl}/opengraph-image.png`,
-          width: 1200,
-          height: 630,
-          alt: "Openchains Technologies Logo",
-        },
-      ],
+      // mages: [
+      //   {
+      //     url: `${baseUrl}/opengraph-image.png`,
+      //     width: 1200,
+      //     height: 630,
+      //     alt: "Openchains Technologies Logo",
+      //   },
+      // ],
       siteName: "Openchains Technologies",
     };
   }
@@ -145,7 +145,7 @@ export class Globals {
       alternates: {
         canonical: baseUrl + path, // Self-referencing canonical
       },
-      metadataBase: new URL(baseUrl),
+      metadataBase: new URL("https://openchains.shop"),
       robots: {
         index: true,
         follow: true,

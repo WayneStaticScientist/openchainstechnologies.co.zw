@@ -1,4 +1,5 @@
 import { baseUrl } from "@/utils/globals";
+import { Suspense } from "react";
 
 export const metadata = {
   title: "JavaScript Code Editor - OpenChains Technologies",
@@ -34,5 +35,5 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return <>{children}</>;
+  <Suspense fallback={<div>Loading editor...</div>}>{children}</Suspense>;
 }

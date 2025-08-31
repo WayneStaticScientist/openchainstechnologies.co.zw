@@ -1,10 +1,12 @@
 "use client";
-import Link from "next/link";
 import React from "react";
+import Link from "next/link";
 import { FaBars } from "react-icons/fa";
 import { SiLivechat } from "react-icons/si";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
+  const path = usePathname();
   return (
     <>
       <header className="w-100 float-left header-con main-box position-relative">
@@ -138,9 +140,7 @@ export default function Header() {
                   >
                     <Link
                       className="dropdown-item"
-                      href={`/editor/html?refer=${encodeURIComponent(
-                        window.location.pathname
-                      )}`}
+                      href={`/editor/html?refer=${encodeURIComponent(path)}`}
                     >
                       Live Html Editor
                     </Link>

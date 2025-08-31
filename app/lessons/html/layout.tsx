@@ -5,18 +5,14 @@ import { IoLogoInstagram } from "react-icons/io";
 import { HtmlChapterFootMap } from "@/utils/chapters-html";
 import { BiLogoFacebook, BiLogoWhatsapp, BiLogoYoutube } from "react-icons/bi";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function layout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const [currentPath, setCurrentPath] = React.useState("");
-  React.useEffect(() => {
-    if (typeof window !== "undefined") {
-      setCurrentPath(window.location.pathname);
-    }
-  }, [window.location.pathname]);
+  const path = usePathname();
   return (
     <>
       {children}
@@ -26,7 +22,7 @@ export default function layout({
           <ul className="list-unstyled mb-0">
             {HtmlChapterFootMap.map((e, i) => (
               <li key={i} className="text-size-16">
-                {currentPath === e.path ? (
+                {path === e.path ? (
                   <span className="text-decoration-underline">
                     <span>{i + 1}</span> {e.title}
                   </span>

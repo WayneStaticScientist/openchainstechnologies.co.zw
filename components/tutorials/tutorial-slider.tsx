@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { codeReviewPagerCode } from "@/utils/constants";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
@@ -12,6 +12,7 @@ export default function CodeReviewPager({
   code: string;
   highLightLanguage?: string;
 }) {
+  const path = usePathname();
   const router = useRouter();
   const [highlighterHeight, setHighlighterHeight] = useState(0);
   const [highlighterWidth, setHighlighterWidth] = useState(0);
@@ -76,9 +77,7 @@ export default function CodeReviewPager({
             onClick={() => {
               localStorage.setItem(codeReviewPagerCode, code);
               router.push(
-                `/editor/html?preload=true&refer=${encodeURIComponent(
-                  window.location.pathname
-                )}`
+                `/editor/html?preload=true&refer=${encodeURIComponent(path)}`
               );
             }}
             className="tw:absolute! tw:top-0! tw:right-0! tw:bg-indigo-600! tw:text-white! tw:py-2! tw:px-4! tw:rounded-bl-lg!
