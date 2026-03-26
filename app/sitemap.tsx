@@ -3,7 +3,7 @@ import { JavascriptChapterFootMap } from "@/utils/chapters-js";
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://openchains.shop";
+  const baseUrl = "https://openchainstechnologies.co.zw/";
   return [
     {
       url: baseUrl,

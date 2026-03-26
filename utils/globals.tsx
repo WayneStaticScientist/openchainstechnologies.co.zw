@@ -6,7 +6,7 @@ import { Metadata } from "next";
 export class Globals {
   public static City = "Harare";
   public static LinkedIn = "";
-  public static BaseUrl = "https://openchains.shop";
+  public static BaseUrl = "https://openchainstechnologies.co.zw";
   public static ActualPrice = 90;
   public static NumberOfProjects = 60;
   public static PromotionPrice = 35;
@@ -25,7 +25,7 @@ export class Globals {
     product: string,
     what: string,
     dueDate: string,
-    category: string
+    category: string,
   ) {
     const message = `*Booking Request*\n\nIm writing to request for ${product}  requesting as a for ${what}. I want it due ${dueDate}, its under the category of  ${category} Could you please provide me with more information`;
     return `https://wa.me/${this.Phone}?text=${encodeURI(message)}`;
@@ -145,7 +145,7 @@ export class Globals {
       alternates: {
         canonical: baseUrl + path, // Self-referencing canonical
       },
-      metadataBase: new URL("https://openchains.shop"),
+      metadataBase: new URL("https://openchainstechnologies.co.zw"),
       robots: {
         index: true,
         follow: true,
@@ -458,7 +458,7 @@ export const sendEmailOnline = async (obj: Record<string, unknown>) => {
       obj,
       {
         publicKey: process.env.NEXT_PUBLIC_PUBLIC_KEY,
-      }
+      },
     );
     return {
       success: response.status === 200,
@@ -472,4 +472,4 @@ export const sendEmailOnline = async (obj: Record<string, unknown>) => {
   }
 };
 export const baseUrl =
-  process.env.NEXT_PUBLIC_BASE_URL || "https://openchains.shop";
+  process.env.NEXT_PUBLIC_BASE_URL || "https://openchainstechnologies.co.zw";

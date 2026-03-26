@@ -12,7 +12,7 @@
 </p>
 
 <p align="center">
-  <a href="https://openchains.shop"><strong>Visit the Live Site »</strong></a>
+  <a href="https://openchainstechnologies.co.zw"><strong>Visit the Live Site »</strong></a>
 </p>
 
 ---

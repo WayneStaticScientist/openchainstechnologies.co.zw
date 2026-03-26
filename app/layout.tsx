@@ -13,7 +13,7 @@ import { Globals } from "@/utils/globals";
 import "./assets/css/owl.carousel.min.css";
 import "./assets/bootstrap/bootstrap.min.css";
 import "./assets/css/owl.theme.default.min.css";
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://openchains.shop";
+const baseUrl = "https://openchainstechnologies.co.zw";
 export default function RootLayout({
   children,
 }: Readonly<{

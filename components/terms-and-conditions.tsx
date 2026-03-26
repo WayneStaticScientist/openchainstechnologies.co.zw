@@ -536,12 +536,12 @@ export const Terms = () => {
             which is incorporated into these Terms by this reference. Please
             review our Privacy Policy{" "}
             <a
-              href="https://openchains.shop/privacy"
+              href="https://openchainstechnologies.co.zw/privacy"
               className="tw:text-blue-600! tw:hover:underline!"
               target="_blank"
               rel="noopener noreferrer"
             >
-              https://openchains.shop/privacy
+              https://openchainstechnologies.co.zw/privacy
             </a>{" "}
             to understand our practices regarding the collection, use, and
             disclosure of your personal information.

@@ -2,10 +2,10 @@
 import React from "react";
 import { Globals } from "@/utils/globals";
 import { IoLogoInstagram } from "react-icons/io";
-import { HtmlChapterFootMap } from "@/utils/chapters-html";
 import { BiLogoFacebook, BiLogoWhatsapp, BiLogoYoutube } from "react-icons/bi";
 import { JavascriptChapterFootMap } from "@/utils/chapters-js";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function layout({
   children,
@@ -13,11 +13,10 @@ export default function layout({
   children: React.ReactNode;
 }>) {
   const [currentPath, setCurrentPath] = React.useState("");
+  const pathname = usePathname();
   React.useEffect(() => {
-    if (typeof window !== "undefined") {
-      setCurrentPath(window.location.pathname);
-    }
-  }, [window.location.pathname]);
+    setCurrentPath(pathname);
+  }, [pathname]);
   return (
     <>
       {children}

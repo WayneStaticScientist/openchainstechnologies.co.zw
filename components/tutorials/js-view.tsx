@@ -1,6 +1,6 @@
 "use client";
 import React, { useRef, useState } from "react";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { codeReviewPagerCode } from "@/utils/constants";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
@@ -19,6 +19,7 @@ export default function JavascriptViewCode({
   highLightLanguage?: string;
 }) {
   const router = useRouter();
+  const pathname = usePathname();
   const [consoleLogLists, setConsoleLogsLists] = useState<
     { message: string; color: string; lineNumber: number }[]
   >([]);
@@ -150,9 +151,7 @@ export default function JavascriptViewCode({
             onClick={() => {
               localStorage.setItem(codeReviewPagerCode, code);
               router.push(
-                `/editor/js?preload=true&refer=${encodeURIComponent(
-                  window.location.pathname
-                )}`
+                `/editor/js?preload=true&refer=${encodeURIComponent(pathname)}`,
               );
             }}
             className="tw:absolute! tw:top-0! tw:right-0! tw:bg-indigo-600! tw:text-white! tw:py-2! tw:px-4! tw:rounded-bl-lg!
